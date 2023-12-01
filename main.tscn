@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnnw0wqu5jv36"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_ka6cg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1v0d"]
+bg_color = Color(0.356863, 0.662745, 0.635294, 1)
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_ka6cg")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 500.0
+offset_bottom = 299.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_l1v0d")
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 200.0
+offset_top = 128.0
+offset_right = 308.0
+offset_bottom = 159.0
+text = "Play"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

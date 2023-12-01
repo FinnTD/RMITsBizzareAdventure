@@ -1,0 +1,160 @@
+[gd_scene load_steps=19 format=3 uid="uid://dn7c3x2qkww7"]
+
+[ext_resource type="Script" path="res://character_select.gd" id="1_3nm3l"]
+[ext_resource type="Texture2D" uid="uid://cods6htw4ige8" path="res://Art/Character/Student/Idle/Blue_Head_Idle-Sheet.png" id="1_kbj13"]
+[ext_resource type="Texture2D" uid="uid://dqm1d0qcmpbmx" path="res://Art/Character/Student/Idle/Orange_Head_Idle-Sheet.png" id="2_liykq"]
+[ext_resource type="Texture2D" uid="uid://dal2h5b2ofw8w" path="res://Art/Character/Student/Idle/Pink_Head_Idle-Sheet.png" id="3_d38gm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pru85"]
+bg_color = Color(0.207843, 0.678431, 0.662745, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a84un"]
+atlas = ExtResource("1_kbj13")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwgfv"]
+atlas = ExtResource("1_kbj13")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74s13"]
+atlas = ExtResource("1_kbj13")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6f7pd"]
+atlas = ExtResource("1_kbj13")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iss0d"]
+atlas = ExtResource("2_liykq")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n18vv"]
+atlas = ExtResource("2_liykq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4blu"]
+atlas = ExtResource("2_liykq")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okv8a"]
+atlas = ExtResource("2_liykq")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kd375"]
+atlas = ExtResource("3_d38gm")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4sx5t"]
+atlas = ExtResource("3_d38gm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ml0a"]
+atlas = ExtResource("3_d38gm")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ctn4"]
+atlas = ExtResource("3_d38gm")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6elvq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a84un")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwgfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74s13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6f7pd")
+}],
+"loop": true,
+"name": &"PlayerBlue",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iss0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n18vv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4blu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okv8a")
+}],
+"loop": true,
+"name": &"PlayerOrange",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kd375")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4sx5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ml0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ctn4")
+}],
+"loop": true,
+"name": &"PlayerPink",
+"speed": 1.0
+}]
+
+[node name="CharacterSelect" type="Node2D"]
+script = ExtResource("1_3nm3l")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 504.0
+offset_bottom = 304.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pru85")
+
+[node name="PlayerSelect" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(248, 120)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_6elvq")
+animation = &"PlayerBlue"
+frame_progress = 0.14581
+
+[node name="Left" type="Button" parent="."]
+offset_left = 64.0
+offset_top = 120.0
+offset_right = 150.0
+offset_bottom = 151.0
+text = "Left"
+
+[node name="Right" type="Button" parent="."]
+offset_left = 344.0
+offset_top = 120.0
+offset_right = 430.0
+offset_bottom = 151.0
+text = "Right"
+
+[node name="Description" type="Label" parent="."]
+offset_left = 192.0
+offset_top = 160.0
+offset_right = 273.0
+offset_bottom = 212.0
+text = "Gender:
+Hair color:"
+
+[node name="Select" type="Button" parent="."]
+offset_left = 224.0
+offset_top = 224.0
+offset_right = 278.0
+offset_bottom = 255.0
+text = "Select"
+
+[connection signal="pressed" from="Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Select" to="." method="_on_select_pressed"]

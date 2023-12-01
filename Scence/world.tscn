@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8xjxpnnv56um"]
+
+[ext_resource type="PackedScene" uid="uid://bq6ovuvmbd2ld" path="res://entities/player/player.tscn" id="1_8cobr"]
+[ext_resource type="Texture2D" uid="uid://ccbigo4am1mjg" path="res://Art/Other/Misc/Grass.png" id="2_yirjf"]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_8cobr")]
+position = Vector2(118.253, 64.4083)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_left = 0
+limit_top = 0
+
+[node name="Background" type="TextureRect" parent="."]
+show_behind_parent = true
+offset_right = 499.0
+offset_bottom = 298.0
+texture = ExtResource("2_yirjf")
