@@ -258,7 +258,7 @@ position = Vector2(85, 70)
 texture = ExtResource("1_63o1t")
 hframes = 5
 vframes = 4
-frame = 10
+frame = 12
 script = ExtResource("3_1hr80")
 
 [node name="Walk" type="Sprite2D" parent="."]

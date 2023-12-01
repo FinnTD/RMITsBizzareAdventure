@@ -9,13 +9,13 @@ func _physics_process(delta):
 
 func _process(delta):
 	direction = Vector2.ZERO
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("ui_left") or Input.is_action_pressed("left"):
 		direction.x -= 1
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_right") or Input.is_action_pressed("right"):
 		direction.x += 1
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("ui_up") or Input.is_action_pressed("up"):
 		direction.y -= 1
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("ui_down") or Input.is_action_pressed("down"):
 		direction.y += 1
 	if direction == Vector2.ZERO:
 		$AnimationTree.get("parameters/playback").travel("Idle")
