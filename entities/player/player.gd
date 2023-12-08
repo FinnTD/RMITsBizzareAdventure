@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var actionable_finder = $Direction/ActionableFinder
 
 var direction: Vector2 = Vector2.ZERO
 var speed: float = 75.0
@@ -33,3 +34,10 @@ func show_Sprite(sprite_name):
 			get_node("Idle").show()
 		"Walk":
 			get_node("Walk").show()
+			
+func _unhandled_input(_event: InputEvent)-> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() >0 :
+			actionables[0].action()
+			return

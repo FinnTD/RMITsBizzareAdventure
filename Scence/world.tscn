@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8xjxpnnv56um"]
+[gd_scene load_steps=7 format=3 uid="uid://c8xjxpnnv56um"]
 
 [ext_resource type="PackedScene" uid="uid://bq6ovuvmbd2ld" path="res://entities/player/player.tscn" id="1_8cobr"]
 [ext_resource type="Texture2D" uid="uid://ccbigo4am1mjg" path="res://Art/Other/Misc/Grass.png" id="2_yirjf"]
+[ext_resource type="PackedScene" uid="uid://c1d26fyjb5eth" path="res://entities/NPC/npc.tscn" id="3_aq1ty"]
+[ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="4_caf7i"]
+[ext_resource type="Resource" uid="uid://bunb0l767uiw" path="res://dialogue/test.dialogue" id="5_a03iu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7tub"]
+size = Vector2(31, 33)
 
 [node name="World" type="Node2D"]
 
@@ -17,3 +23,13 @@ show_behind_parent = true
 offset_right = 499.0
 offset_bottom = 298.0
 texture = ExtResource("2_yirjf")
+
+[node name="NPC" parent="." instance=ExtResource("3_aq1ty")]
+position = Vector2(159, 17)
+
+[node name="ActionAble" parent="NPC" instance=ExtResource("4_caf7i")]
+dialogue_resource = ExtResource("5_a03iu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/ActionAble"]
+position = Vector2(151.5, 164.5)
+shape = SubResource("RectangleShape2D_t7tub")
