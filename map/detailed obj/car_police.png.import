@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db754tbh8yb8a"
-path="res://.godot/imported/SHnew.png-4534b8b4384d4986b9c83d44cc2b22d3.ctex"
+uid="uid://byihwdod03fqq"
+path="res://.godot/imported/car_police.png-dbab458d6e43c779127c5b67d276aaaa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/detailed obj/SHnew.png"
-dest_files=["res://.godot/imported/SHnew.png-4534b8b4384d4986b9c83d44cc2b22d3.ctex"]
+source_file="res://map/detailed obj/car_police.png"
+dest_files=["res://.godot/imported/car_police.png-dbab458d6e43c779127c5b67d276aaaa.ctex"]
 
 [params]
 

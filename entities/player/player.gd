@@ -2,7 +2,7 @@ extends CharacterBody2D
 @onready var actionable_finder = $Direction/ActionableFinder
 
 var direction: Vector2 = Vector2.ZERO
-var speed: float = 150
+var speed: float = 250
 
 func _physics_process(delta):
 	var velocity = direction.normalized() * speed

@@ -6,7 +6,7 @@
 size = Vector2(31, 25)
 
 [node name="NPC" type="CharacterBody2D"]
-position = Vector2(44, 13)
+position = Vector2(49, 1)
 metadata/_edit_group_ = true
 
 [node name="39843567212203543355872487583796804930176568N" type="Sprite2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bq6ovuvmbd2ld"]
+[gd_scene load_steps=31 format=3 uid="uid://bq6ovuvmbd2ld"]
 
 [ext_resource type="Script" path="res://entities/player/player.gd" id="1_8r72c"]
 [ext_resource type="Texture2D" uid="uid://cods6htw4ige8" path="res://Art/Character/Student/Idle/Blue_Head_Idle-Sheet.png" id="1_63o1t"]
@@ -8,33 +8,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w07bm"]
 size = Vector2(20, 30)
-
-[sub_resource type="Animation" id="Animation_2hlss"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Idle:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Walk:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
 [sub_resource type="Animation" id="Animation_s3ova"]
 resource_name = "idle_down"
@@ -166,7 +139,6 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jkyob"]
 _data = {
-"RESET": SubResource("Animation_2hlss"),
 "idle_down": SubResource("Animation_s3ova"),
 "idle_left": SubResource("Animation_icmq0"),
 "idle_right": SubResource("Animation_64ye2"),
@@ -297,3 +269,6 @@ collision_mask = 16
 position = Vector2(84.5, 71)
 shape = SubResource("RectangleShape2D_mf6e6")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
