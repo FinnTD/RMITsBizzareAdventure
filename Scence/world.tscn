@@ -1,15 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8xjxpnnv56um"]
+[gd_scene load_steps=8 format=3 uid="uid://c8xjxpnnv56um"]
 
 [ext_resource type="PackedScene" uid="uid://bq6ovuvmbd2ld" path="res://entities/player/player.tscn" id="1_8cobr"]
 [ext_resource type="Texture2D" uid="uid://ccbigo4am1mjg" path="res://Art/Other/Misc/Grass.png" id="2_yirjf"]
 [ext_resource type="PackedScene" uid="uid://c1d26fyjb5eth" path="res://entities/NPC/npc.tscn" id="3_aq1ty"]
 [ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="4_caf7i"]
 [ext_resource type="Resource" uid="uid://bunb0l767uiw" path="res://dialogue/test.dialogue" id="5_a03iu"]
+[ext_resource type="PackedScene" uid="uid://dg6sqjq0ridp2" path="res://map/outsidemap/rmitmap.tmx" id="6_dd6mm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7tub"]
-size = Vector2(31, 33)
+size = Vector2(54, 52)
 
 [node name="World" type="Node2D"]
+y_sort_enabled = true
+position = Vector2(-1, 0)
 
 [node name="Player" parent="." instance=ExtResource("1_8cobr")]
 position = Vector2(118.253, 64.4083)
@@ -20,16 +23,22 @@ limit_top = 0
 
 [node name="Background" type="TextureRect" parent="."]
 show_behind_parent = true
+z_index = -1
 offset_right = 499.0
 offset_bottom = 298.0
 texture = ExtResource("2_yirjf")
 
 [node name="NPC" parent="." instance=ExtResource("3_aq1ty")]
-position = Vector2(159, 17)
+position = Vector2(223, -23)
 
 [node name="ActionAble" parent="NPC" instance=ExtResource("4_caf7i")]
 dialogue_resource = ExtResource("5_a03iu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/ActionAble"]
-position = Vector2(151.5, 164.5)
+position = Vector2(150, 174)
 shape = SubResource("RectangleShape2D_t7tub")
+
+[node name="rmitmap" parent="." instance=ExtResource("6_dd6mm")]
+z_index = -2
+position = Vector2(3200, 1381)
+scale = Vector2(0.5, 0.5)

@@ -1,0 +1,92 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgcwn6lfm4128"]
+
+[ext_resource type="Texture2D" uid="uid://do7ci5t0hgixb" path="res://map/detailed obj/editedtileset.png" id="1_sd3f3"]
+[ext_resource type="PackedScene" uid="uid://dg6sqjq0ridp2" path="res://map/outsidemap/rmitmap.tmx" id="2_1s2yp"]
+[ext_resource type="PackedScene" uid="uid://bq6ovuvmbd2ld" path="res://entities/player/player.tscn" id="2_o8d1c"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rho2u"]
+texture = ExtResource("1_sd3f3")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xyala"]
+sources/0 = SubResource("TileSetAtlasSource_rho2u")
+
+[node name="RmitMap" type="Node2D"]
+y_sort_enabled = true
+
+[node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_xyala")
+collision_visibility_mode = 1
+format = 2
+layer_0/name = "layerGround"
+layer_0/tile_data = PackedInt32Array(524302, 262144, 1, 786446, 262144, 1, 1048590, 262144, 1, 1048594, 262144, 1, 786450, 262144, 1, 786454, 262144, 1, 1048598, 262144, 1, 1048602, 262144, 1, 786458, 262144, 1, 524306, 262144, 1, 524310, 262144, 1, 524314, 262144, 1, 262158, 262144, 1, 262162, 262144, 1, 262166, 262144, 1, 262170, 262144, 1)
+layer_1/name = "layerUp"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = -1
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(655380, 524288, 3, 851991, 524288, 3, 1048602, 524288, 3, 393240, 524288, 3)
+
+[node name="rmitmap" parent="TileMap" instance=ExtResource("2_1s2yp")]
+z_index = -3
+position = Vector2(1229, 545)
+scale = Vector2(0.2, 0.2)
+
+[node name="Player" parent="." instance=ExtResource("2_o8d1c")]
+position = Vector2(122, 79)

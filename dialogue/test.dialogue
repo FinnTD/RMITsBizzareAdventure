@@ -1,13 +1,37 @@
 ~ start
 
-lee: [[Hi|Hello|Howdy]], this is some dialogue.
-lee: Here are some choices.
+Lee: [[Hi|Hello|Howdy]], this is some dialogue.
+% Lee: And then I might say this
+% Lee: Or maybe this
+% Lee: Or even this? 
+Lee: Here are some choices.
+{{charaName[PlayerSelect]}}: ... 
 - First one
-	lee: You picked the first one.
+	Lee: You picked the first one.
+	Lee: Your are the commander of the Gray Raven
 - Second one
-	lee: You picked the second one.
-- Start again 
+	Lee: You picked the second one.
+	do get_tree().change_scene_to_file("res://Scence/teaching.tscn")
+- Start again => start
 - End the conversation => END
-lee: For more information see the online documentation.
+Lee: For more information see the online documentation.
 
 => END
+
+~ html
+if HtmlLesson == 0
+	Lee: This is htmlThe HyperText Markup Language or HTML is the standard 
+		markup language for documents designed to be displayed in a web browser. 
+		It defines the meaning and structure of web content. 
+		=> END
+if HtmlLesson == 1
+	Lee: This is a example code of how html language work. 
+	=> END
+if HtmlLesson == 2
+	Lee: This is the output of the code i show before.
+Lee: Do you want to learn again.
+- Yes 
+	set HtmlLesson = 0
+	=> html
+- No	
+	=> END

@@ -22,19 +22,24 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [dialogue_manager]
 
-general/balloon_path="res://dialogue/dialogue_balloon/small_balloon.tscn"
+general/balloon_path="res://dialogue/dialogue_balloon/balloon.tscn"
+general/states=["Game"]
 
 [display]
 
-window/size/viewport_width=500
-window/size/viewport_height=300
+window/size/viewport_width=1400
+window/size/viewport_height=800
 window/size/window_width_override=1500
 window/size/window_height_override=1000
 window/stretch/mode="canvas_items"
 
+[editor]
+
+import/use_multiple_threads=false
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AS2P/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/AS2P/plugin.cfg", "res://addons/YATI/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
 
 [input]
 

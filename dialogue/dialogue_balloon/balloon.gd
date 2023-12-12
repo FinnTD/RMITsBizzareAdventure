@@ -6,7 +6,8 @@ extends CanvasLayer
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 @onready var portrait = %Portrait
-@onready var talk_sound = $talkSound
+@onready var talk_sound = $TalkSound
+
 
 ## The dialogue resource
 var resource: DialogueResource
@@ -34,7 +35,7 @@ var dialogue_line: DialogueLine:
 
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
-		var portrait_path: String = 'res://Art/Character/portrait/%s.png' % dialogue_line.character.to_lower()
+		var portrait_path: String = "res://Art/Character/portrait/%s.png" % dialogue_line.character.to_lower()
 		if ResourceLoader.exists(portrait_path):
 			portrait.texture = load(portrait_path)
 		else:

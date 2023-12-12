@@ -250,6 +250,7 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 size = Vector2(19, 30)
 
 [node name="Player" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_8r72c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -261,7 +262,7 @@ position = Vector2(85, 70)
 texture = ExtResource("1_63o1t")
 hframes = 5
 vframes = 4
-frame = 11
+frame = 12
 script = ExtResource("3_1hr80")
 
 [node name="Walk" type="Sprite2D" parent="."]
