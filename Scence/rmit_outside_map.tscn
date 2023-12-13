@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://cyqwyj8qqxwny"]
+[gd_scene load_steps=73 format=3 uid="uid://cyqwyj8qqxwny"]
 
 [ext_resource type="PackedScene" uid="uid://0dddiba6ikq7" path="res://map/outsidemap/rmitmap.tmx" id="1_6lb21"]
 [ext_resource type="Texture2D" uid="uid://mrrhpu526xtp" path="res://map/detailed obj/tree.png" id="2_jl80g"]
@@ -37,13 +37,25 @@
 size = Vector2(99.5, 76)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h7nib"]
-size = Vector2(425, 302)
+size = Vector2(205, 147)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1l1de"]
+size = Vector2(326.375, 257.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_635ku"]
+size = Vector2(131.875, 238)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ayuc2"]
+radius = 71.8471
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7osf5"]
+radius = 11.1803
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vfoas"]
 size = Vector2(471, 166)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p58aq"]
-size = Vector2(709.5, 139.75)
+size = Vector2(759.5, 139.75)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xtawl"]
 radius = 115.017
@@ -123,8 +135,23 @@ radius = 18.3848
 [sub_resource type="CircleShape2D" id="CircleShape2D_qb8v5"]
 radius = 34.0147
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bd2cf"]
+size = Vector2(12.3076, 20)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8rt8m"]
-size = Vector2(39, 30)
+size = Vector2(39, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qf7h1"]
+size = Vector2(4515, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_apy6f"]
+size = Vector2(72.5, 1427)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cqmb5"]
+size = Vector2(101, 1445)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aj4kb"]
+size = Vector2(4690, 77.25)
 
 [node name="rmit_outside_map" type="Node2D"]
 z_index = 1
@@ -160,20 +187,47 @@ position = Vector2(2310.5, -59)
 texture = ExtResource("2_jl80g")
 
 [node name="Player" parent="." instance=ExtResource("3_ksyn3")]
-position = Vector2(1254, 1053)
+position = Vector2(1251, 1163)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+z_index = 10
+position = Vector2(85, 73.5)
+limit_left = 20
+limit_top = 10
+limit_right = 4520
+limit_bottom = 1380
+editor_draw_limits = true
+metadata/_edit_group_ = true
 
 [node name="SH" type="CharacterBody2D" parent="."]
 y_sort_enabled = true
 position = Vector2(361.75, 112)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SH"]
-position = Vector2(-1629.25, 508)
+position = Vector2(-1564.25, 585.5)
 shape = SubResource("RectangleShape2D_h7nib")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="SH"]
+position = Vector2(-1579.94, 475.75)
+shape = SubResource("RectangleShape2D_1l1de")
+
 [node name="Sh2" type="Sprite2D" parent="SH"]
+y_sort_enabled = true
 position = Vector2(-1613.75, 472)
 scale = Vector2(2, 2)
 texture = ExtResource("4_6uwjp")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="SH"]
+position = Vector2(-1764.69, 470)
+shape = SubResource("RectangleShape2D_635ku")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="SH"]
+position = Vector2(-1808.75, 414)
+shape = SubResource("CircleShape2D_ayuc2")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="SH"]
+position = Vector2(-1381.75, 592)
+shape = SubResource("CircleShape2D_7osf5")
 
 [node name="B2" type="CharacterBody2D" parent="."]
 y_sort_enabled = true
@@ -188,7 +242,7 @@ position = Vector2(2126.5, 956)
 shape = SubResource("RectangleShape2D_vfoas")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="B2"]
-position = Vector2(2045.25, 851.125)
+position = Vector2(2070.25, 851.125)
 shape = SubResource("RectangleShape2D_p58aq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="B2"]
@@ -939,6 +993,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("28_or881")
 
 [node name="Bush21" type="Sprite2D" parent="."]
+y_sort_enabled = true
 position = Vector2(1630, 556)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("28_or881")
@@ -969,6 +1024,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("28_or881")
 
 [node name="Bush27" type="Sprite2D" parent="."]
+y_sort_enabled = true
 position = Vector2(1609, 444)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("28_or881")
@@ -1039,11 +1095,11 @@ texture = ExtResource("29_a2jhd")
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="den4"]
-position = Vector2(295, 724)
+position = Vector2(294, 739)
 shape = SubResource("CircleShape2D_shfem")
 
 [node name="Cot3" type="Sprite2D" parent="den4"]
-position = Vector2(301, 692)
+position = Vector2(300, 707)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("29_a2jhd")
 
@@ -1051,11 +1107,11 @@ texture = ExtResource("29_a2jhd")
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="den5"]
-position = Vector2(-51, 627)
+position = Vector2(-54, 611)
 shape = SubResource("CircleShape2D_shfem")
 
 [node name="Cot3" type="Sprite2D" parent="den5"]
-position = Vector2(-49, 590)
+position = Vector2(-52, 574)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("29_a2jhd")
 
@@ -1063,11 +1119,11 @@ texture = ExtResource("29_a2jhd")
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="den7"]
-position = Vector2(-911, 728)
+position = Vector2(-902, 737.25)
 shape = SubResource("CircleShape2D_shfem")
 
 [node name="Cot3" type="Sprite2D" parent="den7"]
-position = Vector2(-907, 686)
+position = Vector2(-898, 695.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("29_a2jhd")
 
@@ -1127,6 +1183,11 @@ shape = SubResource("CircleShape2D_qb8v5")
 position = Vector2(496, 339)
 shape = SubResource("CircleShape2D_qb8v5")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cafe"]
+position = Vector2(419, 324)
+scale = Vector2(1.3, 1.3)
+shape = SubResource("RectangleShape2D_bd2cf")
+
 [node name="B89New" type="Sprite2D" parent="."]
 position = Vector2(-557, 627)
 scale = Vector2(0.5, 0.5)
@@ -1136,75 +1197,93 @@ texture = ExtResource("31_r33q3")
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="treee2"]
-position = Vector2(239.5, 722)
+position = Vector2(238.5, 737)
 shape = SubResource("RectangleShape2D_8rt8m")
 
 [node name="ShortTree" type="Sprite2D" parent="treee2"]
-position = Vector2(250, 685)
+position = Vector2(249, 700)
 texture = ExtResource("32_o4evn")
 
 [node name="treee" type="CharacterBody2D" parent="."]
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="treee"]
-position = Vector2(62, 723)
+position = Vector2(61, 741.5)
 shape = SubResource("RectangleShape2D_8rt8m")
 
 [node name="ShortTree" type="Sprite2D" parent="treee"]
-position = Vector2(69, 683)
+position = Vector2(68, 698)
 texture = ExtResource("32_o4evn")
 
 [node name="treee4" type="CharacterBody2D" parent="."]
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="treee4"]
-position = Vector2(-133, 720)
+position = Vector2(-134, 735)
 shape = SubResource("RectangleShape2D_8rt8m")
 
 [node name="ShortTree" type="Sprite2D" parent="treee4"]
-position = Vector2(-127, 683)
+position = Vector2(-128, 698)
 texture = ExtResource("32_o4evn")
 
 [node name="treee5" type="CharacterBody2D" parent="."]
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="treee5"]
-position = Vector2(-227, 626)
+position = Vector2(-230, 610)
 shape = SubResource("RectangleShape2D_8rt8m")
 
 [node name="ShortTree" type="Sprite2D" parent="treee5"]
-position = Vector2(-221, 590)
+position = Vector2(-224, 574)
 texture = ExtResource("32_o4evn")
 
 [node name="treee6" type="CharacterBody2D" parent="."]
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="treee6"]
-position = Vector2(-844, 628)
+position = Vector2(-849, 617)
 shape = SubResource("RectangleShape2D_8rt8m")
 
 [node name="ShortTree" type="Sprite2D" parent="treee6"]
-position = Vector2(-833, 586)
+position = Vector2(-838, 575)
 texture = ExtResource("32_o4evn")
 
 [node name="treee7" type="CharacterBody2D" parent="."]
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="treee7"]
-position = Vector2(-774, 730)
+position = Vector2(-765, 739.25)
 shape = SubResource("RectangleShape2D_8rt8m")
 
 [node name="ShortTree" type="Sprite2D" parent="treee7"]
-position = Vector2(-763, 693)
+position = Vector2(-754, 702.25)
 texture = ExtResource("32_o4evn")
 
 [node name="treee8" type="CharacterBody2D" parent="."]
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="treee8"]
-position = Vector2(-398, 633)
+position = Vector2(-401, 617)
 shape = SubResource("RectangleShape2D_8rt8m")
 
 [node name="ShortTree" type="Sprite2D" parent="treee8"]
-position = Vector2(-391, 589)
+position = Vector2(-394, 573)
 texture = ExtResource("32_o4evn")
+
+[node name="MapBorder" type="StaticBody2D" parent="."]
+
+[node name="top" type="CollisionShape2D" parent="MapBorder"]
+position = Vector2(537.5, -52)
+shape = SubResource("RectangleShape2D_qf7h1")
+
+[node name="right" type="CollisionShape2D" parent="MapBorder"]
+position = Vector2(2818.75, 638)
+shape = SubResource("RectangleShape2D_apy6f")
+
+[node name="left" type="CollisionShape2D" parent="MapBorder"]
+position = Vector2(-1768.5, 643.5)
+shape = SubResource("RectangleShape2D_cqmb5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapBorder"]
+position = Vector2(510, 1385.38)
+shape = SubResource("RectangleShape2D_aj4kb")

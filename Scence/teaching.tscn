@@ -12,24 +12,24 @@
 script = ExtResource("1_gvphp")
 
 [node name="SchoolBoard" type="Sprite2D" parent="."]
-position = Vector2(248.375, 151)
-scale = Vector2(0.698252, 0.665198)
+position = Vector2(700.375, 406.5)
+scale = Vector2(1.96259, 1.79075)
 texture = ExtResource("2_kmajc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 44.0
-offset_top = 35.0
-offset_right = 460.0
-offset_bottom = 211.0
+offset_left = 208.0
+offset_top = 96.0
+offset_right = 1208.0
+offset_bottom = 592.0
 texture = ExtResource("3_hi5st")
 expand_mode = 1
 script = ExtResource("4_hg6wa")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 411.0
-offset_top = 232.0
-offset_right = 449.0
-offset_bottom = 261.0
+offset_left = 1104.0
+offset_top = 640.0
+offset_right = 1264.0
+offset_bottom = 715.0
 theme = SubResource("Theme_aw46o")
 text = "Next"
 
