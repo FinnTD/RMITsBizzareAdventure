@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxe6fsc8ycigs"]
+
+[ext_resource type="Texture2D" uid="uid://1ocuekfda6lt" path="res://Art/Character/NPC/helper.png" id="2_gawkg"]
+[ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="2_vpq2u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jk4nm"]
+size = Vector2(27, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ip2sw"]
+size = Vector2(40.5, 121)
+
+[node name="NPC" type="CharacterBody2D"]
+position = Vector2(33, 27)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(148.5, 175.5)
+shape = SubResource("RectangleShape2D_jk4nm")
+
+[node name="ActionAble" parent="." instance=ExtResource("2_vpq2u")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble"]
+position = Vector2(147, 196.5)
+shape = SubResource("RectangleShape2D_ip2sw")
+
+[node name="Helper" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(150, 160)
+texture = ExtResource("2_gawkg")

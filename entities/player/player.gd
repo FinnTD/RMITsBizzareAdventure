@@ -58,3 +58,6 @@ func show_Sprite(sprite_name):
 		"Walk":
 			get_node("Walk").show()
 			
+
+
+
