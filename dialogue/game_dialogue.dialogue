@@ -1,0 +1,108 @@
+~ start
+
+Lee: [[Hi|Hello|Howdy]], this is some dialogue.
+% Lee: And then I might say this
+% Lee: Or maybe this
+% Lee: Or even this? 
+Lee: Here are some choices.
+{{charaName[PlayerSelect]}}: ... 
+- First one
+	Lee: You picked the first one.
+	Lee: Your are the commander of the Gray Raven
+- Second one
+	Lee: You picked the second one.
+	do get_tree().change_scene_to_file("res://Scence/teaching.tscn")
+- Start again => start
+- End the conversation => END
+Lee: For more information see the online documentation.
+
+=> END
+
+~ html
+if HtmlLesson == 0
+	Lee: This is htmlThe HyperText Markup Language or HTML is the standard 
+		markup language for documents designed to be displayed in a web browser. 
+		It defines the meaning and structure of web content. 
+		=> END
+if HtmlLesson == 1
+	Lee: This is a example code of how html language work. 
+	=> END
+if HtmlLesson == 2
+	Lee: This is the output of the code i show before.
+Lee: Do you want to learn again.
+- Yes 
+	set HtmlLesson = 0
+	=> html
+- No	
+	=> END
+	
+~ floor_1
+: Do you want to enter Building 2 ?
+- Yes
+	do get_tree().change_scene_to_file("res://Scence/building_2_layer_1.tscn")
+	=> END
+- No
+	=> END
+	
+	
+~ exist_floor_1
+do get_tree().change_scene_to_file("res://Scence/rmit_outside_map.tscn")
+=> END
+
+~ floor_4
+: Do you want to go to Floor 4 ?
+- Yes
+	do get_tree().change_scene_to_file("res://Scence/building_2_layer_4.tscn")
+	=> END
+- No
+	=> END
+	
+~ exist_floor_4
+: Do you want to go to Floor 1 ?
+- Yes
+	do get_tree().change_scene_to_file("res://Scence/building_2_layer_1.tscn")
+	=> END
+- No
+	=> END
+	
+~ connect
+: Do you want to go to Connect ?
+- Yes
+	do get_tree().change_scene_to_file("res://Scence/connect.tscn")
+	=> END
+- No
+	=> END
+
+
+~ exist_connect
+do get_tree().change_scene_to_file("res://Scence/rmit_outside_map.tscn")
+=> END
+
+
+~ C_plus_room
+: Do you want to go to C++ class ?
+- Yes
+	do get_tree().change_scene_to_file("res://Scence/Room_C++.tscn")
+	=> END
+- No
+	=> END
+
+~ Java_room
+: Do you want to go to Java class ?
+- Yes
+	do get_tree().change_scene_to_file("res://Scence/Room_Java.tscn")
+	=> END
+- No
+	=> END
+	
+~ HTML_room
+: Do you want to go to HTML class ?
+- Yes
+	do get_tree().change_scene_to_file("res://Scence/Room_HTML.tscn")
+	=> END
+- No
+	=> END
+	
+~ exist_class
+do get_tree().change_scene_to_file("res://Scence/building_2_layer_4.tscn")
+=> END

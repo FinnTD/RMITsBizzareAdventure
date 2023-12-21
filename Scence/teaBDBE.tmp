@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dq68sa7w0qibw"]
+
+[ext_resource type="Script" path="res://teaching.gd" id="1_ieoul"]
+[ext_resource type="Texture2D" uid="uid://b1nqexsktp0re" path="res://Art/Other/SchoolBoard.png" id="2_kmajc"]
+[ext_resource type="Texture2D" uid="uid://t2vh3mcmimlq" path="res://Art/Other/Study/html1.png" id="3_hi5st"]
+[ext_resource type="Script" path="res://teaching2.gd" id="4_liirv"]
+
+[sub_resource type="Theme" id="Theme_aw46o"]
+
+[node name="Teaching" type="Node2D"]
+script = ExtResource("1_ieoul")
+
+[node name="SchoolBoard" type="Sprite2D" parent="."]
+position = Vector2(248.375, 151)
+scale = Vector2(0.698252, 0.665198)
+texture = ExtResource("2_kmajc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 44.0
+offset_top = 35.0
+offset_right = 460.0
+offset_bottom = 211.0
+texture = ExtResource("3_hi5st")
+expand_mode = 1
+script = ExtResource("4_liirv")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 411.0
+offset_top = 232.0
+offset_right = 449.0
+offset_bottom = 261.0
+theme = SubResource("Theme_aw46o")
+text = "Next"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

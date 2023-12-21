@@ -1,0 +1,203 @@
+[gd_scene load_steps=28 format=3 uid="uid://jqsyqwv5pode"]
+
+[ext_resource type="Texture2D" uid="uid://ch62hwkcqjoop" path="res://map/innermap/sporthall/nurse_room.png" id="1_82w1i"]
+[ext_resource type="PackedScene" uid="uid://bq6ovuvmbd2ld" path="res://entities/player/player.tscn" id="2_rxia4"]
+[ext_resource type="Texture2D" uid="uid://b3c4nix7rjhnn" path="res://map/detailed obj/drug_win.png" id="3_fvksw"]
+[ext_resource type="Texture2D" uid="uid://d3nq64xl3an2g" path="res://map/detailed obj/drug_collection.png" id="4_7t3h5"]
+[ext_resource type="Texture2D" uid="uid://b541t5m7y2gkm" path="res://map/detailed obj/bench.png" id="5_wk840"]
+[ext_resource type="Texture2D" uid="uid://bh7kk34ntnx24" path="res://map/detailed obj/table2.png" id="6_7qybl"]
+[ext_resource type="Texture2D" uid="uid://6ia5wbja7i5l" path="res://map/detailed obj/bed1-removebg-preview.png" id="7_lk2dd"]
+[ext_resource type="Texture2D" uid="uid://cogp1xsl0qxvn" path="res://map/detailed obj/doctab-removebg-preview.png" id="8_12jb1"]
+[ext_resource type="Texture2D" uid="uid://ds1wt2e7dovot" path="res://map/detailed obj/letan-removebg-preview.png" id="9_m3lrn"]
+[ext_resource type="PackedScene" uid="uid://c1d26fyjb5eth" path="res://entities/NPC/nurse.tscn" id="10_g3c34"]
+[ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="11_nqck2"]
+[ext_resource type="Resource" uid="uid://bunb0l767uiw" path="res://dialogue/game_dialogue.dialogue" id="12_mdhd6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbx4l"]
+size = Vector2(714, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n18mn"]
+size = Vector2(432, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bt4er"]
+size = Vector2(287, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqiam"]
+size = Vector2(48.5, 379.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lr2hk"]
+size = Vector2(1244.5, 43.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ijcsb"]
+size = Vector2(47.25, 48.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fo6y7"]
+size = Vector2(47, 482)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iunkl"]
+size = Vector2(126, 103)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypie2"]
+size = Vector2(40, 83.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xg0xt"]
+size = Vector2(45.5, 165.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vn7xo"]
+size = Vector2(100.5, 57.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ienni"]
+size = Vector2(77, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwjyk"]
+size = Vector2(231.5, 85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h74v3"]
+size = Vector2(227.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vthfo"]
+size = Vector2(207, 87)
+
+[node name="medicalroom" type="Node2D"]
+metadata/_edit_horizontal_guides_ = []
+
+[node name="NurseRoom" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(912, 605)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_82w1i")
+
+[node name="Player" parent="." instance=ExtResource("2_rxia4")]
+z_index = 11
+position = Vector2(891, 541)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(937, 270)
+shape = SubResource("RectangleShape2D_qbx4l")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1654, 317)
+shape = SubResource("RectangleShape2D_n18mn")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1661, 569)
+shape = SubResource("RectangleShape2D_n18mn")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(383.5, 601)
+shape = SubResource("RectangleShape2D_bt4er")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(216.75, 749.25)
+shape = SubResource("RectangleShape2D_rqiam")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1463, 749)
+shape = SubResource("RectangleShape2D_rqiam")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1848, 446)
+shape = SubResource("RectangleShape2D_rqiam")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(862.75, 918)
+shape = SubResource("RectangleShape2D_lr2hk")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(553.625, 869.125)
+shape = SubResource("RectangleShape2D_ijcsb")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(551.5, 462)
+shape = SubResource("RectangleShape2D_fo6y7")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(407, 670)
+shape = SubResource("RectangleShape2D_iunkl")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1333, 674.25)
+shape = SubResource("RectangleShape2D_ypie2")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1270.25, 197.75)
+shape = SubResource("RectangleShape2D_xg0xt")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1466, 210.625)
+shape = SubResource("RectangleShape2D_xg0xt")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1513, 284)
+shape = SubResource("RectangleShape2D_xg0xt")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1513, 546)
+shape = SubResource("RectangleShape2D_xg0xt")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1584.75, 526.75)
+shape = SubResource("RectangleShape2D_vn7xo")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1782.5, 325)
+shape = SubResource("RectangleShape2D_ienni")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1055.25, 332.5)
+shape = SubResource("RectangleShape2D_gwjyk")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1366.25, 131)
+shape = SubResource("RectangleShape2D_h74v3")
+
+[node name="DrugWin" type="Sprite2D" parent="."]
+position = Vector2(698, 277)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_fvksw")
+
+[node name="DrugCollection" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1783, 339)
+texture = ExtResource("4_7t3h5")
+
+[node name="Bench" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1448, 642)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_wk840")
+
+[node name="Table2" type="Sprite2D" parent="."]
+position = Vector2(1333, 672)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_7qybl")
+
+[node name="Bed1-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(389, 656)
+texture = ExtResource("7_lk2dd")
+
+[node name="Doctab-removebg-preview" type="Sprite2D" parent="."]
+z_index = 15
+position = Vector2(1588, 503)
+scale = Vector2(0.87415, 0.809524)
+texture = ExtResource("8_12jb1")
+
+[node name="Letan-removebg-preview" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1047, 304)
+texture = ExtResource("9_m3lrn")
+
+[node name="NPC" parent="." instance=ExtResource("10_g3c34")]
+position = Vector2(898, 147)
+
+[node name="ActionAble" parent="." instance=ExtResource("11_nqck2")]
+dialogue_resource = ExtResource("12_mdhd6")
+dialogue_start = "exist_connect"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble"]
+position = Vector2(1375, 161.5)
+shape = SubResource("RectangleShape2D_vthfo")

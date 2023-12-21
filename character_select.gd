@@ -17,9 +17,9 @@ func _on_left_pressed():
 
 
 func _on_right_pressed():
-	if Game.PlayerSelect <3:
+	if Game.PlayerSelect <2:
 		Game.PlayerSelect += 1
 
 
 func _on_select_pressed():
-	get_tree().change_scene_to_file("res://Scence/world.tscn")
+	get_tree().change_scene_to_file("res://Scence/rmit_outside_map.tscn")

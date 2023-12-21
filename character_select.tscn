@@ -114,45 +114,45 @@ animations = [{
 script = ExtResource("1_3nm3l")
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 504.0
-offset_bottom = 304.0
+offset_right = 1401.0
+offset_bottom = 801.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_pru85")
 
 [node name="PlayerSelect" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(248, 120)
-scale = Vector2(2, 2)
+position = Vector2(724.5, 285.5)
+scale = Vector2(3.09375, 3.09375)
 sprite_frames = SubResource("SpriteFrames_6elvq")
 animation = &"PlayerBlue"
 frame_progress = 0.14581
 
 [node name="Left" type="Button" parent="."]
-offset_left = 64.0
-offset_top = 120.0
-offset_right = 150.0
-offset_bottom = 151.0
+offset_left = 277.0
+offset_top = 377.0
+offset_right = 422.0
+offset_bottom = 448.0
 text = "Left"
 
 [node name="Right" type="Button" parent="."]
-offset_left = 344.0
-offset_top = 120.0
-offset_right = 430.0
-offset_bottom = 151.0
+offset_left = 1028.0
+offset_top = 367.0
+offset_right = 1173.0
+offset_bottom = 438.0
 text = "Right"
 
 [node name="Description" type="Label" parent="."]
-offset_left = 192.0
-offset_top = 160.0
-offset_right = 273.0
-offset_bottom = 212.0
+offset_left = 668.0
+offset_top = 426.0
+offset_right = 941.0
+offset_bottom = 562.0
 text = "Gender:
 Hair color:"
 
 [node name="Select" type="Button" parent="."]
-offset_left = 224.0
-offset_top = 224.0
-offset_right = 278.0
-offset_bottom = 255.0
+offset_left = 607.0
+offset_top = 569.0
+offset_right = 850.0
+offset_bottom = 662.0
 text = "Select"
 
 [connection signal="pressed" from="Left" to="." method="_on_left_pressed"]

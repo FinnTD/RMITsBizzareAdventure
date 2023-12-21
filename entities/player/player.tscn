@@ -1,40 +1,14 @@
-[gd_scene load_steps=31 format=3 uid="uid://bq6ovuvmbd2ld"]
+[gd_scene load_steps=34 format=3 uid="uid://bq6ovuvmbd2ld"]
 
 [ext_resource type="Script" path="res://entities/player/player.gd" id="1_8r72c"]
 [ext_resource type="Texture2D" uid="uid://cods6htw4ige8" path="res://Art/Character/Student/Idle/Blue_Head_Idle-Sheet.png" id="1_63o1t"]
 [ext_resource type="Texture2D" uid="uid://fkvqsqrvesrh" path="res://Art/Character/Student/Walking/Blue_Head_Walking-Sheet.png" id="2_d136q"]
 [ext_resource type="Script" path="res://entities/player/Idle.gd" id="3_1hr80"]
 [ext_resource type="Script" path="res://entities/player/Walk.gd" id="5_jm1ub"]
+[ext_resource type="Texture2D" uid="uid://dp5e3s0puf6ak" path="res://Art/Other/questionMark.png" id="6_40k2j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w07bm"]
 size = Vector2(20, 30)
-
-[sub_resource type="Animation" id="Animation_2hlss"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Idle:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Walk:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
 [sub_resource type="Animation" id="Animation_s3ova"]
 resource_name = "idle_down"
@@ -166,7 +140,6 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jkyob"]
 _data = {
-"RESET": SubResource("Animation_2hlss"),
 "idle_down": SubResource("Animation_s3ova"),
 "idle_left": SubResource("Animation_icmq0"),
 "idle_right": SubResource("Animation_64ye2"),
@@ -246,7 +219,29 @@ states/Walk/node = SubResource("AnimationNodeBlendSpace2D_ib26t")
 states/Walk/position = Vector2(506, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_iqpnx"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_cmqx3"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_nmuuj")]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mf6e6"]
+size = Vector2(19, 30)
+
+[sub_resource type="GDScript" id="GDScript_30q0c"]
+script/source = "extends Area2D
+
+
+func _on_area_entered(area: Area2D)->void:
+	self.visible = true
+
+func _on_area_exited(area: Area2D)->void:
+	self.visible = false
+	
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed(\"ui_accept\") and self.visible:
+		self.visible = false
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1x7x2"]
+size = Vector2(20, 29.5)
+
 [node name="Player" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_8r72c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -258,7 +253,7 @@ position = Vector2(85, 70)
 texture = ExtResource("1_63o1t")
 hframes = 5
 vframes = 4
-frame = 12
+frame = 9
 script = ExtResource("3_1hr80")
 
 [node name="Walk" type="Sprite2D" parent="."]
@@ -280,5 +275,34 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/conditions/idle = false
 parameters/conditions/is_walking = false
-parameters/Idle/blend_position = Vector2(-0.5328, 0.225764)
+parameters/Idle/blend_position = Vector2(-0.00161028, 0.417904)
 parameters/Walk/blend_position = Vector2(0.0208, 0.244978)
+
+[node name="Direction" type="Marker2D" parent="."]
+
+[node name="ActionableFinder" type="Area2D" parent="Direction"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
+position = Vector2(84.5, 71)
+shape = SubResource("RectangleShape2D_mf6e6")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+metadata/_edit_group_ = true
+
+[node name="QuestionMark" type="Area2D" parent="."]
+visible = false
+scale = Vector2(0.993976, 1)
+collision_mask = 16
+script = SubResource("GDScript_30q0c")
+
+[node name="QuestionMark" type="Sprite2D" parent="QuestionMark"]
+position = Vector2(85.5151, 43)
+texture = ExtResource("6_40k2j")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="QuestionMark"]
+position = Vector2(85.0121, 70.75)
+shape = SubResource("RectangleShape2D_1x7x2")
+
+[connection signal="area_entered" from="QuestionMark" to="QuestionMark" method="_on_area_entered"]
+[connection signal="area_exited" from="QuestionMark" to="QuestionMark" method="_on_area_exited"]
