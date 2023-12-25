@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd3ofmf2ti45l"]
+
+[ext_resource type="Texture2D" uid="uid://dhesv4atyt7sd" path="res://menu/image/mainmenu.jpeg" id="1_444q1"]
+[ext_resource type="Theme" uid="uid://bm2iitvnf1ii6" path="res://menu/new_theme.tres" id="1_rrgsm"]
+[ext_resource type="Script" path="res://main_menu.gd" id="2_7klkr"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchor_right = 1.089
+anchor_bottom = 1.083
+offset_right = -102.528
+offset_bottom = -53.7841
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_rrgsm")
+script = ExtResource("2_7klkr")
+
+[node name="Mainmenu" type="Sprite2D" parent="."]
+position = Vector2(576, 321.5)
+scale = Vector2(1.12109, 0.989231)
+texture = ExtResource("1_444q1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.788235, 0.286275, 0.572549, 1)
+theme_override_colors/font_shadow_color = Color(0.666667, 0.588235, 0.54902, 1)
+theme_override_colors/font_outline_color = Color(0.815686, 0.74902, 0.490196, 1)
+theme_override_constants/shadow_offset_x = -4
+theme_override_constants/shadow_offset_y = -3
+theme_override_constants/outline_size = -3
+theme_override_constants/shadow_outline_size = -6
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 60
+text = "Rmiters Bizarre Adventure
+"
+vertical_alignment = 1
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+focus_neighbor_top = NodePath("../Quit")
+focus_neighbor_bottom = NodePath("../Quit")
+focus_next = NodePath("../Quit")
+focus_previous = NodePath("../Quit")
+theme_override_colors/font_color = Color(0.956863, 0.835294, 0.898039, 1)
+text = "Start"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+focus_neighbor_top = NodePath("../Start")
+focus_neighbor_bottom = NodePath("../Start")
+focus_next = NodePath("../Start")
+focus_previous = NodePath("../Start")
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsContainer/Quit" to="." method="_on_quit_pressed"]

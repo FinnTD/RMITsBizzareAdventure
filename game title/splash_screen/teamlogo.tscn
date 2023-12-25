@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://daxnbf2vcgjll"]
+
+[ext_resource type="Script" path="res://splash_screen/Splash_screen.gd" id="1_hdk0e"]
+[ext_resource type="Texture2D" uid="uid://blypqns6rrs4" path="res://splash_screen/teamlogo-removebg-preview.png" id="2_54y8b"]
+
+[node name="teamlogo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hdk0e")
+
+[node name="Teamlogo-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(592, 283)
+texture = ExtResource("2_54y8b")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://c280drl28kdi1"]
+
+[ext_resource type="Script" path="res://splash_screen/splash_manager.gd" id="1_1h7qf"]
+[ext_resource type="PackedScene" uid="uid://dd3ofmf2ti45l" path="res://main_menu.tscn" id="2_v1p8g"]
+[ext_resource type="PackedScene" uid="uid://c42nkohjmayij" path="res://splash_screen/godotlogo.tscn" id="3_n2wml"]
+[ext_resource type="PackedScene" uid="uid://daxnbf2vcgjll" path="res://splash_screen/teamlogo.tscn" id="4_1qxjt"]
+
+[node name="splash_manager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1h7qf")
+_move_to = ExtResource("2_v1p8g")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.113725, 0.113725, 0.113725, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -321.0
+offset_right = -576.0
+offset_bottom = -321.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="godotlogo" parent="CenterContainer" instance=ExtResource("3_n2wml")]
+layout_mode = 2
+
+[node name="teamlogo" parent="CenterContainer" instance=ExtResource("4_1qxjt")]
+layout_mode = 2

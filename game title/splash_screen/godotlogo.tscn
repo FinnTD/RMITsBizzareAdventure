@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c42nkohjmayij"]
+
+[ext_resource type="Texture2D" uid="uid://y4qf78iwepfj" path="res://splash_screen/godotlogo.jpeg" id="1_18vls"]
+[ext_resource type="Script" path="res://splash_screen/Splash_screen.gd" id="1_310xg"]
+
+[node name="godotlogo" type="Control"]
+layout_mode = 3
+anchor_right = 3.164
+anchor_bottom = 3.13
+offset_right = -2492.93
+offset_bottom = -1380.24
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_310xg")
+
+[node name="Godotlogo" type="Sprite2D" parent="."]
+position = Vector2(578.249, 325.249)
+scale = Vector2(0.600782, 0.595835)
+texture = ExtResource("1_18vls")
