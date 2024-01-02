@@ -1,0 +1,17 @@
+~ guard
+
+Guard: [[Hello and welcome to RMIT! Make sure to be on time for your classes. Don't forget your student ID card; it's your key to everything on campus|Good day! Remember, punctuality is key. Always carry your student ID card with you. It's your ticket to a smooth campus experience|Need directions? Feel free to ask. It can be a bit overwhelming at first, but I'm here to help you find your way around]] .
+
+=> END
+
+~ nurse
+
+Nurse: [[Hi there! How's your day going? Need any medical assistance, just checking on your learning progress?|Feeling a bit tired? I can perform a quick health check-up to restore your energy bar. What do you say|Feeling a bit tired? I can perform a quick health check-up to restore your energy bar. What do you say|Did you know maintaining a healthy balance between study, rest is crucial? If you ever need advice on wellness, I'm here.|Regular exercise is key to staying focused. How about joining one of our campus fitness programs?]] .
+
+=> END
+
+~ helper
+
+Helper: [[Welcome! Curious about how our learning system works in this game? I can guide you through it|Interested in knowing more about RMIT Vietnam or our SaiGon South Campus? I've got all the information you need |Want to join a study group or a coding club? I can connect you with other students who share your interests|Need tech support? We're here to assist with any issues you might encounter in the game or your coursework]] .
+
+=> END

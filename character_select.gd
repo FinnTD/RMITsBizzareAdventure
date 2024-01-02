@@ -4,7 +4,7 @@ func _process(_delta):
 	match Game.PlayerSelect:
 		0:
 			get_node("PlayerSelect").play("PlayerBlue")
-			get_node("Description").text = "Gender: Male \nHair color: Blue"
+			get_node("Description").text = "Gender: Female \nHair color: Purple"
 		1:
 			get_node("PlayerSelect").play("PlayerOrange")
 			get_node("Description").text = "Gender: Male \nHair color: Orange"

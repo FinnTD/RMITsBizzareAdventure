@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxe6fsc8ycigs"]
+[gd_scene load_steps=6 format=3 uid="uid://dxe6fsc8ycigs"]
 
+[ext_resource type="Resource" uid="uid://b3ijn04pwodg5" path="res://dialogue/npc.dialogue" id="2_cyjc3"]
 [ext_resource type="Texture2D" uid="uid://1ocuekfda6lt" path="res://Art/Character/NPC/helper.png" id="2_gawkg"]
 [ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="2_vpq2u"]
 
@@ -17,6 +18,8 @@ position = Vector2(148.5, 175.5)
 shape = SubResource("RectangleShape2D_jk4nm")
 
 [node name="ActionAble" parent="." instance=ExtResource("2_vpq2u")]
+dialogue_resource = ExtResource("2_cyjc3")
+dialogue_start = "helper"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble"]
 position = Vector2(147, 196.5)

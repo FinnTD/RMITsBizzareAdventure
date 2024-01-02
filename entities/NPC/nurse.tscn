@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1d26fyjb5eth"]
+[gd_scene load_steps=6 format=3 uid="uid://c1d26fyjb5eth"]
 
 [ext_resource type="Texture2D" uid="uid://dhxo1nml6mgoq" path="res://Art/Character/NPC/398435672_1220354335587248_7583796804930176568_n.png" id="1_imtf0"]
 [ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="2_qv1vo"]
+[ext_resource type="Resource" uid="uid://b3ijn04pwodg5" path="res://dialogue/npc.dialogue" id="3_n2vc8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jk4nm"]
 size = Vector2(31, 25)
@@ -23,6 +24,8 @@ position = Vector2(150.5, 175.5)
 shape = SubResource("RectangleShape2D_jk4nm")
 
 [node name="ActionAble" parent="." instance=ExtResource("2_qv1vo")]
+dialogue_resource = ExtResource("3_n2vc8")
+dialogue_start = "nurse"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble"]
 position = Vector2(150, 203)

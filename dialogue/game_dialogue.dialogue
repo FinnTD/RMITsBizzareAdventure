@@ -23,7 +23,7 @@ if HtmlLesson == 0
 	Lee: This is htmlThe HyperText Markup Language or HTML is the standard 
 		markup language for documents designed to be displayed in a web browser. 
 		It defines the meaning and structure of web content. 
-		=> END
+		set HtmlLesson =1
 if HtmlLesson == 1
 	Lee: This is a example code of how html language work. 
 	=> END
@@ -106,3 +106,27 @@ do get_tree().change_scene_to_file("res://Scence/rmit_outside_map.tscn")
 ~ exist_class
 do get_tree().change_scene_to_file("res://Scence/building_2_layer_4.tscn")
 => END
+
+~ medical_room
+: Do you want to go to Medical room ?
+- Yes
+	do get_tree().change_scene_to_file("res://Scence/medicalroom.tscn")
+	=> END
+- No
+	=> END
+
+~ exist_medical
+do get_tree().change_scene_to_file("res://Scence/rmit_outside_map.tscn")
+=> END
+
+~ sport_hall_return
+do get_tree().change_scene_to_file("res://Scence/sport_hall.tscn")
+=> END
+
+~ sport_hall
+: Do you want to go t0 Sport Hall ?
+- Yes
+	do get_tree().change_scene_to_file("res://Scence/sport_hall.tscn")
+	=> END
+- No
+	=> END

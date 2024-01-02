@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cnyicqc0pk2vx" path="res://entities/NPC/Quang.tscn" id="15_1n4xg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7l4w"]
-size = Vector2(1389, 32)
+size = Vector2(1416.5, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gqpet"]
 size = Vector2(7.5, 553)
@@ -42,11 +42,10 @@ z_index = -10
 position = Vector2(98, 397)
 scale = Vector2(2.37037, 1.62097)
 texture = ExtResource("1_m0ejv")
-metadata/_edit_group_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_y5j2w")]
 z_index = 2
-position = Vector2(607, 126)
+position = Vector2(408, 158)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(191, 78.5)
@@ -352,7 +351,7 @@ position = Vector2(99, 198)
 shape = SubResource("RectangleShape2D_n7l4w")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(80, 818.5)
+position = Vector2(93.75, 818.5)
 shape = SubResource("RectangleShape2D_n7l4w")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
