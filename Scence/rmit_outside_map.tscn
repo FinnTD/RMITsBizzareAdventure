@@ -34,7 +34,6 @@
 [ext_resource type="Texture2D" uid="uid://dtac3588gaqte" path="res://map/detailed obj/Cafeteria.png" id="30_i14ob"]
 [ext_resource type="Texture2D" uid="uid://13kj14mkx24v" path="res://map/detailed obj/shortTree.png" id="32_o4evn"]
 [ext_resource type="Texture2D" uid="uid://dslrn7pooknl7" path="res://map/detailed obj/B89.png" id="32_w10ww"]
-[ext_resource type="PackedScene" uid="uid://xema4akaa1o" path="res://Scence/Menu.tscn" id="33_c7i6h"]
 [ext_resource type="PackedScene" uid="uid://cg1224t4l4fn2" path="res://music/MusicBackground.tscn" id="36_hs00f"]
 [ext_resource type="Texture2D" uid="uid://c3m5mkqot42xk" path="res://map/outsidemap/basketballfield.png" id="37_s1qxs"]
 [ext_resource type="PackedScene" uid="uid://b27gn31ns2x2w" path="res://entities/NPC/keeper.tscn" id="38_dx0xy"]
@@ -183,6 +182,9 @@ size = Vector2(353, 59)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tiu16"]
 size = Vector2(730, 311.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lalne"]
+size = Vector2(187, 419.5)
+
 [node name="rmit_outside_map" type="Node2D"]
 z_index = 1
 y_sort_enabled = true
@@ -226,11 +228,6 @@ limit_top = 10
 limit_right = 4520
 limit_bottom = 1380
 editor_draw_limits = true
-
-[node name="Menu" parent="Player" instance=ExtResource("33_c7i6h")]
-z_index = 100
-position = Vector2(-269, -127.5)
-scale = Vector2(0.5, 0.5)
 
 [node name="MusicBackground" parent="Player" instance=ExtResource("36_hs00f")]
 position = Vector2(-637.5, -396.5)
@@ -1389,3 +1386,11 @@ shape = SubResource("RectangleShape2D_tiu16")
 
 [node name="NPC" parent="." instance=ExtResource("38_dx0xy")]
 position = Vector2(1367, 1017)
+
+[node name="ActionAble2" parent="." instance=ExtResource("7_pu2n1")]
+dialogue_resource = ExtResource("8_ihyur")
+dialogue_start = "sport_hall"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble2"]
+position = Vector2(-1205.5, 616.75)
+shape = SubResource("RectangleShape2D_lalne")

@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=3 uid="uid://cur3rt4bcrm3y"]
+
+[ext_resource type="Texture2D" uid="uid://bqy1v2pye765i" path="res://map/innermap/sporthall/sporthall.png" id="1_626dn"]
+[ext_resource type="PackedScene" uid="uid://bq6ovuvmbd2ld" path="res://entities/player/player.tscn" id="2_fwb2d"]
+[ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="3_rqt7v"]
+[ext_resource type="Resource" uid="uid://bunb0l767uiw" path="res://dialogue/game_dialogue.dialogue" id="4_bwjvv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_as3ie"]
+size = Vector2(115, 986)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yb4yh"]
+size = Vector2(1029, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gna1c"]
+size = Vector2(712, 406)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67gra"]
+size = Vector2(148, 138)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycqkb"]
+size = Vector2(148, 138)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8jjy"]
+size = Vector2(140, 100)
+
+[node name="sportHall" type="Node2D"]
+
+[node name="Sporthall" type="Sprite2D" parent="."]
+position = Vector2(743, 532)
+scale = Vector2(3, 3)
+texture = ExtResource("1_626dn")
+
+[node name="Player" parent="." instance=ExtResource("2_fwb2d")]
+position = Vector2(302, 630)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_left = 0
+limit_top = 0
+limit_right = 1000
+limit_bottom = 1000
+editor_draw_limits = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-47.5, 423)
+shape = SubResource("RectangleShape2D_as3ie")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(993, 402)
+shape = SubResource("RectangleShape2D_as3ie")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(462.5, -38)
+shape = SubResource("RectangleShape2D_yb4yh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(489, 882)
+shape = SubResource("RectangleShape2D_yb4yh")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(470, 309)
+shape = SubResource("RectangleShape2D_gna1c")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(722, 619)
+shape = SubResource("RectangleShape2D_67gra")
+
+[node name="ActionAble" parent="." instance=ExtResource("3_rqt7v")]
+dialogue_resource = ExtResource("4_bwjvv")
+dialogue_start = "medical_room"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble"]
+position = Vector2(958, 363)
+shape = SubResource("RectangleShape2D_ycqkb")
+
+[node name="ActionAble" parent="ActionAble" instance=ExtResource("3_rqt7v")]
+dialogue_resource = ExtResource("4_bwjvv")
+dialogue_start = "exist_medical"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble/ActionAble"]
+position = Vector2(476, 822)
+shape = SubResource("RectangleShape2D_w8jjy")

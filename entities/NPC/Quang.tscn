@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnyicqc0pk2vx"]
+[gd_scene load_steps=6 format=3 uid="uid://cnyicqc0pk2vx"]
 
+[ext_resource type="Resource" uid="uid://4xb45lborglo" path="res://dialogue/study.dialogue" id="2_3ufcs"]
 [ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="2_78x87"]
 [ext_resource type="Texture2D" uid="uid://dm7vlghinwagy" path="res://Art/Character/NPC/Quang.png" id="2_c5o6t"]
 
@@ -17,6 +18,8 @@ position = Vector2(148.5, 175.5)
 shape = SubResource("RectangleShape2D_jk4nm")
 
 [node name="ActionAble" parent="." instance=ExtResource("2_78x87")]
+dialogue_resource = ExtResource("2_3ufcs")
+dialogue_start = "welcome_C"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble"]
 position = Vector2(152.75, 173)

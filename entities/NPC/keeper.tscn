@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b27gn31ns2x2w"]
+[gd_scene load_steps=6 format=3 uid="uid://b27gn31ns2x2w"]
 
 [ext_resource type="Texture2D" uid="uid://p2p8db52rjgg" path="res://Art/Character/NPC/keepr.png" id="1_5e12h"]
 [ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="2_qvquo"]
+[ext_resource type="Resource" uid="uid://b3ijn04pwodg5" path="res://dialogue/npc.dialogue" id="3_lsx5o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jk4nm"]
 size = Vector2(27, 25)
@@ -21,6 +22,8 @@ position = Vector2(152, 163)
 texture = ExtResource("1_5e12h")
 
 [node name="ActionAble" parent="." instance=ExtResource("2_qvquo")]
+dialogue_resource = ExtResource("3_lsx5o")
+dialogue_start = "guard"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble"]
 position = Vector2(148.75, 166.25)

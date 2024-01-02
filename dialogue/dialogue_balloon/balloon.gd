@@ -130,7 +130,7 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)
 
 
-func _on_dialogue_label_spoke(letter, letter_index, speed):
+func _on_dialogue_label_spoke(letter, _letter_index, _speed):
 	if not letter in ["."," "]:
 		#talk_sound.pitch_scale = randf_range(0.9,1.1)
 		talk_sound.play()
