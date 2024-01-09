@@ -6,7 +6,7 @@ Guard: [[Hello and welcome to RMIT! Make sure to be on time for your classes. Do
 
 ~ nurse
 
-Nurse: [[Hi there! How's your day going? Need any medical assistance, just checking on your learning progress?|Feeling a bit tired? I can perform a quick health check-up to restore your energy bar. What do you say|Feeling a bit tired? I can perform a quick health check-up to restore your energy bar. What do you say|Did you know maintaining a healthy balance between study, rest is crucial? If you ever need advice on wellness, I'm here.|Regular exercise is key to staying focused. How about joining one of our campus fitness programs?]] .
+Nurse: [[Hi there! How's your day going? Need any medical assistance, just checking on your learning progress?|Feeling a bit tired? I can perform a quick health check-up to restore your energy bar. What do you say?|Feeling a bit tired? I can perform a quick health check-up to restore your energy bar. What do you say|Did you know maintaining a healthy balance between study, rest is crucial? If you ever need advice on wellness, I'm here.|Regular exercise is key to staying focused. How about joining one of our campus fitness programs?]] 
 
 => END
 

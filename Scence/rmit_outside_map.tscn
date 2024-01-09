@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=3 uid="uid://cyqwyj8qqxwny"]
+[gd_scene load_steps=88 format=3 uid="uid://cyqwyj8qqxwny"]
 
 [ext_resource type="PackedScene" uid="uid://xrpjcifx67o3" path="res://map/outsidemap/rmitmap.tmx" id="1_6lb21"]
 [ext_resource type="Texture2D" uid="uid://mrrhpu526xtp" path="res://map/detailed obj/tree.png" id="2_jl80g"]
@@ -183,7 +183,10 @@ size = Vector2(353, 59)
 size = Vector2(730, 311.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lalne"]
-size = Vector2(187, 419.5)
+size = Vector2(187, 143.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ovaxm"]
+size = Vector2(348, 148)
 
 [node name="rmit_outside_map" type="Node2D"]
 z_index = 1
@@ -1392,5 +1395,21 @@ dialogue_resource = ExtResource("8_ihyur")
 dialogue_start = "sport_hall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble2"]
-position = Vector2(-1205.5, 616.75)
+position = Vector2(-1205.5, 754.75)
 shape = SubResource("RectangleShape2D_lalne")
+
+[node name="ActionAble4" parent="." instance=ExtResource("7_pu2n1")]
+dialogue_resource = ExtResource("8_ihyur")
+dialogue_start = "medical_room"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble4"]
+position = Vector2(-1230, 489)
+shape = SubResource("RectangleShape2D_lalne")
+
+[node name="ActionAble3" parent="." instance=ExtResource("7_pu2n1")]
+dialogue_resource = ExtResource("8_ihyur")
+dialogue_start = "cafeteria"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble3"]
+position = Vector2(620, 363)
+shape = SubResource("RectangleShape2D_ovaxm")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbm2aixrig5rd"]
+
+[ext_resource type="Script" path="res://main_menu/splash_screen.gd" id="2_6xuia"]
+[ext_resource type="Texture2D" uid="uid://d2i7fqp5q7uot" path="res://main_menu/teamlogo-removebg-preview.png" id="2_u67wq"]
+
+[node name="ControllerSplashScreen" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(8.94872, 6.65625)
+script = ExtResource("2_6xuia")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_u67wq")
+expand_mode = 4

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://4rkb04qy77f5"]
+[gd_scene load_steps=6 format=3 uid="uid://4rkb04qy77f5"]
 
 [ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="1_3v3pf"]
+[ext_resource type="Resource" uid="uid://c6riv530chyn3" path="res://dialogue/study_Css.dialogue" id="2_trqbs"]
 [ext_resource type="Texture2D" uid="uid://cvkjyhqvvfkb2" path="res://Art/Character/NPC/Tuan.png" id="2_yphn6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jk4nm"]
@@ -17,6 +18,8 @@ position = Vector2(148.5, 175.5)
 shape = SubResource("RectangleShape2D_jk4nm")
 
 [node name="ActionAble" parent="." instance=ExtResource("1_3v3pf")]
+dialogue_resource = ExtResource("2_trqbs")
+dialogue_start = "welcome_Css"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble"]
 position = Vector2(152.75, 173)

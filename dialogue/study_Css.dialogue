@@ -1,0 +1,367 @@
+
+~ welcome_Css
+if Game.currentHealth +10 > 60:
+	{{charaName[PlayerSelect]}}: I'm too stressed to take the class now, I should go to the cafeteria to 
+		eat something or go to the medical room to relieve stress.
+	=> END
+Tuan: [[Hi|Hello|Howdy]], Welcome to CSS class! CSS is used to style the elements in a web page. 
+		CSS is a styling language that works together with HTML to give a page its look and layout.
+Tuan: In this course you will learn how to create Css style, perform various operations, and much more!
+Tuan: Do you want to start now?
+- Gettting started and Styling Techniques
+	set  CssLesson = 0
+	set Game.currentHealth += 10
+	do get_tree().change_scene_to_file("res://Scence/study_Css.tscn")
+	=> END
+- The Anatomy of CSS and Style Inheritance
+	set  CssLesson = 13
+	set Game.currentHealth += 10
+	do get_tree().change_scene_to_file("res://Scence/study_Css.tscn")
+	=> END
+- ID and Class Selectors, Standards and Best Practices
+	set  CssLesson = 25
+	set Game.currentHealth += 10
+	do get_tree().change_scene_to_file("res://Scence/study_Css.tscn")
+	=> END
+- No
+	=> END
+
+~ study_Css
+if  CssLesson == 0
+	Tuan: CSS is used to style the elements in a web page. 
+			The color property is used to control the color of the text.
+			Code a blue heading. 
+	set CssLesson = 1
+	Tuan:  What will this code display?
+	- A purple paragraph
+			{{charaName[PlayerSelect]}}: A purple paragraph. 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- A heading with purple background
+			{{charaName[PlayerSelect]}}: A heading with purple background
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- A heading with purple text
+			{{charaName[PlayerSelect]}}: A heading with purple text
+			Tuan: 🎉Congratulations, this is the right answer🎉
+	Tuan: CSS properties control the style of HTML elements. Examples of CSS properties are 
+		color, border, font-size and margin.
+		Make the text in the paragraph large
+		<p style = "font-size:large">Text</p>
+	Tuan:  CSS properties require values. Values are possible settings for a property.
+	Tuan: To the color property to make the text red:
+			<p style = "color:red">Text</p> 
+	set CssLesson = 2
+	Tuan: The CSS code for an HTML element must be enclosed in double or single quotes,
+		following the style attribute.
+	Tuan: Code a blue heading:
+		<h1 style = "color:blue">Agenda</h1>
+	Tuan: It time for question, What is wrong with this code?
+
+	- Incorrect tags
+		{{charaName[PlayerSelect]}}: Incorrect tags
+		set Game.currentHealth += 5
+		Tuan: ❌Sorry,this is a wrong answer❌
+	- Missing quotes
+		{{charaName[PlayerSelect]}}: Missing quotes
+		Tuan: 🎉Congratulations, this is the right answer🎉
+	- Incorrect property
+		{{charaName[PlayerSelect]}}: Incorrect property
+		set Game.currentHealth += 5
+		Tuan: ❌Sorry,this is a wrong answer❌
+	set CssLesson = 3
+	Tuan: Code the heading in the image (red text and black background) for an online game
+	set CssLesson = 4
+	Tuan: Code a button with a green background.
+	set CssLesson = 5
+	Tuan: CSS stands for Cascading Style Sheets and is one of the 3 core web technologies. Cascading refers 
+		to the set of rules you'll learn in the following lessons.
+	Tuan: Structure: HTML
+	Tuan: Style: CSS
+	Tuan: Interactivity: JavaScript
+	set CssLesson = 6
+	Tuan: In the next lesson, you will learn about the styling rules to create breath-taking websites.
+	set CssLesson = 7
+	Tuan: Adding CSS code to every HTML element takes time and makes your HTML structure unorganized.
+	Tuan: In this lesson, you'll learn an alternative way to style your pages that makes your CSS code 
+		more efficient.
+	Tuan: In this lesson, you'll learn an alternative way to style your pages that makes your CSS code 
+		more efficient.
+	Tuan: When CSS code is added to HTML elements, this is called inline CSS.
+	Tuan: You'll learn to style your web pages in different ways.
+		The styling technique that adds CSS code inside HTML elements is called…
+	- External CSS
+			{{charaName[PlayerSelect]}}: External CSS. 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- Inline CSS
+			{{charaName[PlayerSelect]}}: Inline CSS
+			Tuan: 🎉Congratulations, this is the right answer🎉
+	set CssLesson = 8
+	Tuan: Inline CSS is easy to add to your code but presents some disadvantages. 
+		For example, to apply the same style to more than one HTML element…
+	- CSS code is added once
+			{{charaName[PlayerSelect]}}: CSS code is added once. 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- CSS code needs to be repeated
+			{{charaName[PlayerSelect]}}: CSS code needs to be repeated
+			Tuan: 🎉Congratulations, this is the right answer🎉
+	set CssLesson = 9
+	Tuan: An alternative styling technique is internal CSS. Internal CSS is used to style the entire page. 
+		The <style> container tag is added within the HTML document to group all the CSS code for the page.
+	Tuan:  A.Inline CSS
+		B.Internal CSS
+	set CssLesson = 10
+	Tuan: Separate multiple selectors with a comma to apply the same style to different elements.
+		This makes your CSS code simpler.
+	Tuan: Here’s a rule that applies the same style to h1 and p elements: <style>
+	set CssLesson = 11
+	Tuan: It's best practice to include all the internal CSS code in the <head> of the page.
+	set CssLesson = 12
+	Tuan: !! In the next lesson, you’ll learn how to build internal CSS styles.
+	Tuan: This is the end of your lesson, go grab some food and have a nice rest.
+	do get_tree().change_scene_to_file("res://Scence/done_study_css.tscn")
+if CssLesson == 13
+	Tuan: CSS controls all the design-related aspects of your web page. This includes fonts, 
+		sizes, colors, position, spacing, layout, animations, and much more.
+		In this lesson, you’ll learn to create CSS to style your pages.
+	Tuan:  It time for question, let me ask you some thing. 
+		What's the selector for a level 1 heading?
+	- <style>
+			{{charaName[PlayerSelect]}}: <style> 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- <h1>
+			{{charaName[PlayerSelect]}}: <h1>
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- h1
+			{{charaName[PlayerSelect]}}: h1
+			Tuan: 🎉Congratulations, this is the right answer🎉
+	Tuan: CSS code creates styling rules. The simplest styling rule consists of a selector, 
+		plus a declaration in curly braces {}. 
+		To code a rule for the buttons in the page:		button {font-size: large;}
+	set CssLesson = 14
+	Tuan:  It time for question, let me ask you some thing. 
+		The rule above will apply to…
+	- The third button in the page
+			{{charaName[PlayerSelect]}}: The third button in the page 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- All paragraphs in the page
+			{{charaName[PlayerSelect]}}: All paragraphs in the page
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- All buttons in the page
+			{{charaName[PlayerSelect]}}: All buttons in the page
+			Tuan: 🎉Congratulations, this is the right answer🎉
+	set CssLesson = 15
+	Tuan: You can add as many declarations to your rule as you need.
+	Tuan:  It time for question, let me ask you some thing. 
+		Each declaration should end with a…
+	- Colon :
+			{{charaName[PlayerSelect]}}: Colon : 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- Semicolon ;
+			{{charaName[PlayerSelect]}}: Semicolon ;
+			Tuan: 🎉Congratulations, this is the right answer🎉
+	- Comma ,
+			{{charaName[PlayerSelect]}}: Comma , 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	set CssLesson = 16
+	Tuan: Your CSS code can contain as many styling rules as you need.
+	set CssLesson = 17
+	Tuan: !! In the next lesson, you’ll learn about child and parent HTML elements, and how 
+		inheritance works in CSS.
+	Tuan: When styling real web pages, your CSS code can grow in length quickly.
+		In this lesson, you'll learn to use style inheritance to create more precise rules 
+		and write code that is simple, organized, clear, and efficient.
+	Tuan:  It time for question, let me ask you some thing. 
+		 In HTML, we call it nesting when…
+	- Tags are styled with CSS
+			{{charaName[PlayerSelect]}}: Tags are styled with CSS 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- Some tags go inside others
+			{{charaName[PlayerSelect]}}: Some tags go inside others
+			Tuan: 🎉Congratulations, this is the right answer🎉
+	set CssLesson = 18
+	Tuan: Which tag is nested inside <p>
+	- <i>
+			{{charaName[PlayerSelect]}}: <i> 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- <b>
+			{{charaName[PlayerSelect]}}: <b>
+			Tuan: 🎉Congratulations, this is the right answer🎉
+	- <body>
+			{{charaName[PlayerSelect]}}: <body> 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	set CssLesson = 19
+	Tuan: With elements, the outer element is known as the parent, and the inner element is the child.
+		Styling rules for parent elements will also be applied to child elements by default. This is
+		known as inheritance. Child elements inherit styles from their parents.
+	set CssLesson = 20
+	Tuan: The word ideas will be displayed in…
+	- Grey
+			{{charaName[PlayerSelect]}}: Grey 
+			Tuan: 🎉Congratulations, this is the right answer🎉
+	- Black
+			{{charaName[PlayerSelect]}}: Black
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	set CssLesson = 21
+	Tuan: By default, children inherit their parent’s style. If you need a child to have a different style, 
+		you must write a separate rule for the child.
+	Tuan: You can use a combination of selectors to make more precise rules.
+		The descendant selector targets children inside a specific parent. It consists of the
+		parent selector, followed by a space, followed by the child selector.
+	set CssLesson = 22
+	Tuan: Select the text that will be displayed in red
+	- Welcome to
+			{{charaName[PlayerSelect]}}: Welcome to 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- USA
+			{{charaName[PlayerSelect]}}: USA
+			Tuan: 🎉Congratulations, this is the right answer🎉
+	- vacation
+			{{charaName[PlayerSelect]}}: vacation 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	set CssLesson = 23
+	Tuan: This descendant selector is targeting…
+	- Underline text nested inside level 1 headings
+			{{charaName[PlayerSelect]}}: Underline text nested inside level 1 headings
+			Tuan: 🎉Congratulations, this is the right answer🎉 
+	- All underlined text in the page
+			{{charaName[PlayerSelect]}}: All underlined text in the page
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- All level 1 headings
+			{{charaName[PlayerSelect]}}: All level 1 headings 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	set CssLesson = 24
+	Tuan: !! In the next lesson, you’ll learn about child and parent HTML elements, and how 
+		inheritance works in CSS.
+	Tuan: This is the end of your lesson, go grab some food and have a nice rest.
+	do get_tree().change_scene_to_file("res://Scence/done_study_css.tscn")
+if CssLesson == 25
+	Tuan: For total control over the design of your HTML elements, you can give them IDs and classes.
+		In this lesson, you’ll learn to use IDs to target specific individual elements, and classes
+		to target groups of elements.
+	Tuan: The id attribute is used to give an unique identifier to a specific element in the page.
+		Give the unique intro identifier to the paragraph.
+		The id attribute is used to identify unique elements in an HTML document.
+	Tuan: Let me give you a question.
+		True or false? You can give multiple elements the same id.
+	- False
+			{{charaName[PlayerSelect]}}: False
+			Tuan: 🎉Congratulations, this is the right answer🎉
+	- True
+			{{charaName[PlayerSelect]}}: True 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	set CssLesson = 26
+	Tuan:  You can target specific elements use hashtag # followed by the ID name as a selector.
+		Another way to identify elements is the class attribute. Use the class attribute to give the 
+		same identifier to a group of elements
+	Tuan: <p class = "movie">
+		Avatar</p>
+		<button class = "movie">
+		Watch now</button>
+	Tuan: Select the attribute that you’d use to apply the same style to a group of elements
+	- ID
+			{{charaName[PlayerSelect]}}: ID
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- Class
+			{{charaName[PlayerSelect]}}: Class 
+			Tuan: 🎉Congratulations, this is the right answer🎉
+	set CssLesson = 27
+	Tuan: You can create styling rules for a group of elements in the same class (group). Use a 
+		dot . followed by the class name to target all the elements in the same class.
+		A style rule for a class will be applied to all the elements in that class.
+	Tuan: The symbol used to construct each type of selector:
+		id  #
+		class  .
+	set CssLesson = 28
+	Tuan: You can also target only those elements of a specific type that have a certain class.
+		This CSS rule will modify only paragraphs with the content class.
+	set CssLesson = 29
+	Tuan: Select the elements that will be displayed with white text
+	- p
+			{{charaName[PlayerSelect]}}: p
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- h1
+			{{charaName[PlayerSelect]}}: h1 
+			Tuan: 🎉Congratulations, this is the right answer🎉
+	set CssLesson = 30
+	Tuan: !! In the next lesson, you’ll learn the algorithm used by browsers to determine the CSS declaration 
+		that is the most relevant to an element.
+	set CssLesson = 31
+	Tuan: In the previous lessons, you learned different ways to target HTML elements for styling.
+		In this lesson, you'll learn how web browsers decide what rule to prioritize when several 
+		rules are targeting the same element at the same time.
+	Tuan: An HTML element can be targeted for styling in different ways. For example, an element
+		may have both a class and an ID.
+	Tuan: Here are 3 ways to target the same HTML element. Find the correct type of selector for 
+		each method
+	Tuan: Element selector: p
+	Tuan: ID selector: #text1
+	Tuan: Class selector: .info
+	set CssLesson = 32
+	Tuan: Each type of CSS selector has its place in this priority list. When several CSS rules
+		target the same HTML element, the browser uses this order to decide which rule to apply.
+	Tuan: This priority order is known as specificity. Specificity is the algorithm used by 
+		browsers to determine the rule to apply to an element.
+	set CssLesson = 33
+	Tuan: Inline style has priority over the element rule. The text will be aligned to the…
+	- Center
+			{{charaName[PlayerSelect]}}: Center
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- Left
+			{{charaName[PlayerSelect]}}: Left 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- Right
+			{{charaName[PlayerSelect]}}: Right 
+			Tuan: 🎉Congratulations, this is the right answer🎉
+	set CssLesson = 34
+	Tuan: You can add notes or explanations to your CSS code. Comments help other humans
+		(and future you!) to read your code.
+		Comments in CSS start with /* and end with */
+	Tuan: When use the internal style technique…
+	- lines of CSS code are distributed across the HTML document
+			{{charaName[PlayerSelect]}}: lines of CSS code are distributed across the HTML document 
+			set Game.currentHealth += 5
+			Tuan: ❌Sorry,this is a wrong answer❌
+	- all CSS code is grouped together in the HTML document in one set of <style> tags
+			{{charaName[PlayerSelect]}}: all CSS code is grouped together in the HTML document in one set of <style> tags
+			Tuan: 🎉Congratulations, this is the right answer🎉 
+	set CssLesson = 35
+	Tuan: An alternative to inline and internal CSS is external CSS. External CSS code is written
+		outside the HTML document, in a separate file.
+	set CssLesson = 36
+	Tuan: One of the advantages of external CSS is that the same CSS styles file can be used by
+		multiple HTML documents (or web pages).A:
+	Tuan: A: internal CSS
+	Tuan: B: external CSS
+	Tuan: Some developers prefer external CSS because it separates structure and style into
+		different files. This means your web page project will consist of several files with
+		different file extensions.
+	Tuan: *.html: structure
+	Tuan: *.css: style
+	Tuan: External CSS is very useful for multi-page websites, as you can style the entire site in
+		one place.
+	set CssLesson = 37
+	Tuan: This is the end of your lesson, go grab some food and have a nice rest.
+	do get_tree().change_scene_to_file("res://Scence/done_study_css.tscn")
+=> END

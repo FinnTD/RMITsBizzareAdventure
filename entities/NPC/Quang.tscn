@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cnyicqc0pk2vx"]
 
-[ext_resource type="Resource" uid="uid://4xb45lborglo" path="res://dialogue/study.dialogue" id="2_3ufcs"]
+[ext_resource type="Resource" uid="uid://4xb45lborglo" path="res://dialogue/study_c.dialogue" id="2_3ufcs"]
 [ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="2_78x87"]
 [ext_resource type="Texture2D" uid="uid://dm7vlghinwagy" path="res://Art/Character/NPC/Quang.png" id="2_c5o6t"]
 

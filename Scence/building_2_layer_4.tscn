@@ -178,16 +178,8 @@ shape = SubResource("RectangleShape2D_ou2qr")
 
 [node name="ActionAble2" parent="." instance=ExtResource("3_wcx7u")]
 dialogue_resource = ExtResource("4_tknta")
-dialogue_start = "Java_room"
+dialogue_start = "CSS_room"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble2"]
 position = Vector2(148, 574)
-shape = SubResource("RectangleShape2D_ou2qr")
-
-[node name="ActionAble3" parent="." instance=ExtResource("3_wcx7u")]
-dialogue_resource = ExtResource("4_tknta")
-dialogue_start = "HTML_room"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble3"]
-position = Vector2(149, 800)
 shape = SubResource("RectangleShape2D_ou2qr")

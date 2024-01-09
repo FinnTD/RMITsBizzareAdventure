@@ -12,9 +12,9 @@ func update():
 	if  Game.currentHealth >= Game.MaxHealth:
 		Game.currentHealth = Game.MaxHealth
 		
-	if 	Game.currentHealth>=0 and Game.currentHealth<=20:
+	if 	Game.currentHealth>=0 and Game.currentHealth<30:
 		self.modulate = Color(0, 0, 1)
-	if 	Game.currentHealth>=30 and Game.currentHealth<=40:
+	if 	Game.currentHealth>=30 and Game.currentHealth<50:
 		self.modulate = Color(0, 1, 0)
 	if 	Game.currentHealth>=50 and Game.currentHealth<=60:
 		self.modulate = Color(1, 0, 0)
