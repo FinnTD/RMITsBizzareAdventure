@@ -1,0 +1,378 @@
+~ test
+if Game.currentHealth +30 > 60:
+	{{charaName[PlayerSelect]}}: I'm too stressed to take the exam, I should go to the cafeteria to 
+		eat something or go to the medical room to relieve stress.
+	=> END
+: This is the test room, where you can test the language you had leanred in the classroom.
+	Each try will increase your stress bar by 30 points, do you want to do it?
+- Test1
+	set TestLesson = 0 
+	set Game.currentHealth += 30
+	do get_tree().change_scene_to_file("res://Scence/test.tscn")
+	=> END
+- Test2
+	set TestLesson = 16 
+	set Game.currentHealth += 30
+	do get_tree().change_scene_to_file("res://Scence/test.tscn")
+	=> END
+- No
+	=> END
+	
+~ test_c
+if TestLesson == 0
+	Question 1: What is the correct way to output the value of an integer variable num use cout?
+	- cout >> num;
+		: This is the wrong answer.
+	- cout = num;
+		: This is the wrong answer.
+	- cout = >> num;
+		: This is the wrong answer.
+	- cout << num;
+		: This is the wrong answer.
+		set TestScore += 1
+		: This is the right answer.
+	set TestLesson = 1
+	Question 2: What will be the output?
+	- 8
+		set TestScore += 1
+		: This is the right answer.
+	- 53
+		: This is the wrong answer.
+	- 15
+		: This is the wrong answer.
+	- 2
+		: This is the wrong answer.
+	set TestLesson = 2
+	Question 3: In C++, which operator is used to concatenate two strings for output?
+	- +
+		set TestScore += 1
+		: This is the right answer.
+	- -
+		: This is the wrong answer.
+	- *
+		: This is the wrong answer.
+	- /
+		: This is the wrong answer.
+	set TestLesson = 3
+	Question 4: What will be the output?
+	- Helloworld!
+		: This is the wrong answer.
+	- Hello, world!
+		set TestScore += 1
+		: This is the right answer.
+	- Hello, , world!
+		: This is the wrong answer.
+	- Hello, world!Hello, world!
+		: This is the wrong answer.
+	set TestLesson = 4
+	Question 5: Which of the following statements is correct regarding the use of semicolons in C++?
+	- Semicolons are optional at the end of every statement.
+		: This is the wrong answer.
+	- Semicolons are only required after variable declarations.
+		: This is the wrong answer.
+	- Semicolons are used to mark the end of a statement in C++.
+		set TestScore += 1
+		: This is the right answer.
+	- Semicolons are never used in C++.
+		: This is the wrong answer.
+	set TestLesson = 5
+	Question 6: What will be the output?
+	- 10;
+		: This is the wrong answer.
+	- x
+		: This is the wrong answer.
+	- void
+		: This is the wrong answer.
+	- 10
+		set TestScore += 1
+		: This is the right answer.
+	set TestLesson = 6
+	Question 7: What is the correct syntax for declaring an integer variable named count in C++?
+	- int count;
+		set TestScore += 1
+		: This is the right answer.
+	- count = int;
+		: This is the wrong answer.
+	- integer count;
+		: This is the wrong answer.
+	- declare count as int;
+		: This is the wrong answer.
+	set TestLesson = 7
+	Question 8: What will be the output?
+	- 14
+		set TestScore += 1
+		: This is the right answer.
+	- 7
+		: This is the wrong answer.
+	- 72
+		: This is the wrong answer.
+	- num * 2
+		: This is the wrong answer.
+	set TestLesson = 8
+	Question 9: In C++, which data type should be used for storing floating-point numbers with higher precision?
+	- float
+	- double
+		set TestScore += 1
+		: This is the right answer.
+	- long float
+		: This is the wrong answer.
+	- Decimal
+		: This is the wrong answer.
+	set TestLesson = 9
+	Question 10: What will be the output?
+	- 14.995
+		set TestScore += 1
+		: This is the right answer.
+	- 15.0
+		: This is the wrong answer.
+	- 29.99 / 2
+		: This is the wrong answer.
+	- 14
+		: This is the wrong answer.
+	set TestLesson = 10
+	Question 11: What is the correct way to declare a string variable named name in C++?
+	- char name;
+		: This is the wrong answer.
+	- string name;
+		set TestScore += 1
+		: This is the right answer.
+	- string name = "John";
+		: This is the wrong answer.
+	- name = "John";
+		: This is the wrong answer.
+	set TestLesson = 11
+	Question 12: What will be the output?
+	- A
+		set TestScore += 1
+		: This is the right answer.
+	- 65
+		: This is the wrong answer.
+	- char
+		: This is the wrong answer.
+	- 'A'
+		: This is the wrong answer.
+	set TestLesson = 12
+	Question 13: Which keyword is used in C++ to represent the boolean data type?
+	- bool
+		set TestScore += 1
+		: This is the right answer.
+	- boolean
+		: This is the wrong answer.
+	- bit
+		: This is the wrong answer.
+	- binary
+		: This is the wrong answer.
+	set TestLesson = 13
+	Question 14: What will be the output?
+	- 0
+		set TestScore += 1
+		: This is the right answer.
+	- false
+		: This is the wrong answer.
+	- bool
+		: This is the wrong answer.
+	- true
+		: This is the wrong answer.
+	set TestLesson = 14
+	Question 15: If int x = 10; cout << x / 3; is executed, what will be the output?
+	- 3
+		set TestScore += 1
+		: This is the right answer.
+	- 3.3333
+		: This is the wrong answer.
+	- 3.0
+		: This is the wrong answer.
+	- 10/3
+		: This is the wrong answer.
+	set TestLesson = 15
+	Question 16: What will be the output?
+	- 5.0
+		set TestScore += 1
+		: This is the right answer.
+	- 5
+		: This is the wrong answer.
+	- 15.0
+		: This is the wrong answer.
+	- 3
+		: This is the wrong answer.
+	set showResult = true
+if TestLesson == 16
+	Question 1: If double a = 7.5; double b = 3.0; double result = a * b;, what is the value of result?
+	- 22.5
+		set TestScore += 1
+		: This is the right answer.
+	- 10.5
+		: This is the wrong answer.
+	- 2.5
+		: This is the wrong answer.
+	- 15.0
+		: This is the wrong answer.
+	set TestLesson = 17
+	Question 2: What will be the output of the code?
+	- 1
+		set TestScore += 1
+		: This is the right answer.
+	- 4
+		: This is the wrong answer.
+	- -1
+		: This is the wrong answer.
+	- 13
+		: This is the wrong answer.
+	set TestLesson = 18
+	Question 3: What will be the output of the code?
+	- 7.75
+		set TestScore += 1
+		: This is the right answer.
+	- 15.0
+		: This is the wrong answer.
+	- 8.0
+		: This is the wrong answer.
+	- 30.0
+		: This is the wrong answer.
+	set TestLesson = 19
+	Question 4: What is the value of int quotient = 15 / 2;?
+	- 7.5
+		: This is the wrong answer.
+	- 7
+		set TestScore += 1
+		: This is the right answer.
+	- 8
+		: This is the wrong answer.
+	- 0.5
+		: This is the wrong answer.
+	set TestLesson = 20
+	Question 5: Given the expression int result = 15 % 4;, what is the value of result?
+	- 3
+		set TestScore += 1
+		: This is the right answer.
+	- 2
+		: This is the wrong answer.
+	- 0
+		: This is the wrong answer.
+	- 4
+		: This is the wrong answer.
+	set TestLesson = 21
+	Question 6: What is the purpose of use the auto keyword in variable declarations?
+	- It forces the variable to be of type double.
+		: This is the wrong answer.
+	- It allows the compiler to automatically deduce the variable's type.
+		set TestScore += 1
+		: This is the right answer.
+	- It declares a variable with no specific type.
+		: This is the wrong answer.
+	- It is used for arithmetic operations.
+		: This is the wrong answer.
+	set TestLesson = 22
+	Question 7: How can you use the auto keyword to declare a variable and assign the remainder of 20 / 3?
+	- auto result = 20 mod 3;
+		: This is the wrong answer.
+	- auto result = 20 % 3;
+		: This is the wrong answer.
+		set TestScore += 1
+		: This is the right answer.
+	- auto result = remainder(20, 3);
+		: This is the wrong answer.
+	- auto result = 20 / 3;
+		: This is the wrong answer.
+	set TestLesson = 23
+	Question 8: What will be the output of the code?
+	- 2
+		: This is the wrong answer.
+	- 0
+		: This is the wrong answer.
+	- 3
+		: This is the wrong answer.
+	- 1
+		set TestScore += 1
+		: This is the right answer.
+	set TestLesson = 24
+	Question 9: How can you use the auto keyword to declare a variable and assign the remainder of 17 / 3?
+	- auto result = 17 / 3;
+		: This is the wrong answer.
+	- auto result = 17 % 3;
+		: This is the wrong answer.
+		set TestScore += 1
+		: This is the right answer.
+	- auto result = 17 remainder 3;
+		: This is the wrong answer.
+	- auto result = 17 mod 3;
+		: This is the wrong answer.
+	set TestLesson = 25
+	Question 10: What will be the output of the code?
+	- 2
+		set TestScore += 1
+		: This is the right answer.
+	- 3
+		: This is the wrong answer.
+	- 4
+		: This is the wrong answer.
+	- 1
+		: This is the wrong answer.
+	set TestLesson = 26
+	Question 11: What will be the output of the code?
+	- 6.25
+		: This is the wrong answer.
+	- 6
+		set TestScore += 1
+		: This is the right answer.
+	- 5
+		: This is the wrong answer.
+	- 7
+		: This is the wrong answer.
+	set TestLesson = 27
+	Question 12: What will be the output of the code?
+	- 10
+		: This is the wrong answer.
+	- 26
+		: This is the wrong answer.
+	- 16
+		set TestScore += 1
+		: This is the right answer.
+	- 15
+		: This is the wrong answer.
+	set TestLesson = 28
+	Question 13: Which of the following variable names is not valid in C++?
+	- totalAmount
+		: This is the wrong answer.
+	- 2ndPlace
+		set TestScore += 1
+		: This is the right answer.
+	- _count
+		: This is the wrong answer.
+	- user-name
+		: This is the wrong answer.
+	set TestLesson = 29
+	Question 14: According to C++ naming conventions, which option is the preferred way to name a constant variable?
+	- PI_VALUE
+		set TestScore += 1
+		: This is the right answer.
+	- piValue
+		: This is the wrong answer.
+	- PiValue
+		: This is the wrong answer.
+	- Pi_value
+		: This is the wrong answer.
+	set TestLesson = 30
+	Question 15: What will be the output of the code?
+	- 98
+		: This is the wrong answer.
+	- 95
+		: This is the wrong answer.
+	- 0
+		: This is the wrong answer.
+	- Compilation Error
+		set TestScore += 1
+		: This is the right answer.
+	set TestLesson = 31
+	Question 16: How do you write a single-line comment in C++?
+	- // This is a comment
+		set TestScore += 1
+		: This is the right answer.
+	-  /* This is a comment */
+		: This is the wrong answer.
+	-  # This is a comment
+		: This is the wrong answer.
+	- -- This is a comment
+		: This is the wrong answer.
+	set showResult = true
+=> END

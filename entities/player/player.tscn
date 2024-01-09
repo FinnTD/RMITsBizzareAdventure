@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://x1g211y3nfqp" path="res://Art/Character/Student/UI.png" id="8_bryfr"]
 [ext_resource type="Script" path="res://entities/player/Portrait.gd" id="9_llwkn"]
 [ext_resource type="Script" path="res://entities/player/Label.gd" id="10_luy6d"]
-[ext_resource type="PackedScene" uid="uid://xema4akaa1o" path="res://Scence/Menu.tscn" id="11_fagmh"]
+[ext_resource type="PackedScene" uid="uid://bxki01bekctxi" path="res://Scence/Menu.tscn" id="11_fagmh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w07bm"]
 size = Vector2(20, 30)
@@ -261,7 +261,7 @@ position = Vector2(85, 70)
 texture = ExtResource("1_63o1t")
 hframes = 5
 vframes = 4
-frame = 9
+frame = 7
 script = ExtResource("3_1hr80")
 
 [node name="Walk" type="Sprite2D" parent="."]

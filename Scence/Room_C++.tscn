@@ -385,7 +385,7 @@ shape = SubResource("RectangleShape2D_ic7kd")
 
 [node name="ActionAble" parent="." instance=ExtResource("13_x2ysg")]
 dialogue_resource = ExtResource("14_55spi")
-dialogue_start = "exist_class"
+dialogue_start = "exist_class_c"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble"]
 position = Vector2(777, 328.25)

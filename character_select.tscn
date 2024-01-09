@@ -141,18 +141,18 @@ offset_bottom = 438.0
 text = "Right"
 
 [node name="Description" type="Label" parent="."]
-offset_left = 668.0
-offset_top = 426.0
-offset_right = 941.0
-offset_bottom = 562.0
+offset_left = 482.0
+offset_top = 459.0
+offset_right = 755.0
+offset_bottom = 595.0
 text = "Gender:
 Hair color:"
 
 [node name="Select" type="Button" parent="."]
-offset_left = 607.0
-offset_top = 569.0
-offset_right = 850.0
-offset_bottom = 662.0
+offset_left = 609.0
+offset_top = 632.0
+offset_right = 852.0
+offset_bottom = 725.0
 text = "Select"
 
 [connection signal="pressed" from="Left" to="." method="_on_left_pressed"]

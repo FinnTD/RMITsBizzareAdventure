@@ -12,6 +12,9 @@ var currentHealth: int = 0
 var PlayerSelect = 0
 
 
-var HtmlLesson = 0
-var JavaLesson = 0
+var CssLesson = 0
+var TestLesson = 0
 var CPlusLesson = 0
+var TestScore = 0
+
+var showResult = false

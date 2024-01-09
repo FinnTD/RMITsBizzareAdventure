@@ -8,11 +8,7 @@ func _physics_process(delta):
 	var velocity = direction.normalized() * speed
 	var _collision_info = move_and_collide(velocity * delta)
 
-func _process(_delta):
-	if Input.is_action_just_pressed("z"):
-		Game.currentHealth -= 10
-	if Input.is_action_just_pressed("up"):
-		Game.currentHealth += 10
+
 func _unhandled_input(_event: InputEvent)-> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		var actionables = actionable_finder.get_overlapping_areas()

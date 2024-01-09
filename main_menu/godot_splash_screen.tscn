@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw6n3bejp418g"]
+
+[ext_resource type="Script" path="res://main_menu/splash_screen.gd" id="1_u88vh"]
+[ext_resource type="Texture2D" uid="uid://cl64781ckp174" path="res://main_menu/godotlogo.jpeg" id="2_vbogl"]
+
+[node name="GodotSplashScreen" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(34.9745, 20.0448)
+script = ExtResource("1_u88vh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_vbogl")
+expand_mode = 4

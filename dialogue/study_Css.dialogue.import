@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c6riv530chyn3"
+path="res://.godot/imported/study_Css.dialogue-cff32b17e19ab2f664b50a7bb7abdeac.tres"
+
+[deps]
+
+source_file="res://dialogue/study_Css.dialogue"
+dest_files=["res://.godot/imported/study_Css.dialogue-cff32b17e19ab2f664b50a7bb7abdeac.tres"]
+
+[params]
+
+defaults=true

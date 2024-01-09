@@ -1,40 +1,4 @@
-~ start
 
-Lee: [[Hi|Hello|Howdy]], this is some dialogue.
-% Lee: And then I might say this
-% Lee: Or maybe this
-% Lee: Or even this? 
-Lee: Here are some choices.
-{{charaName[PlayerSelect]}}: ... 
-- First one
-	Lee: You picked the first one.
-	Lee: Your are the commander of the Gray Raven
-- Second one
-	Lee: You picked the second one.
-	do get_tree().change_scene_to_file("res://Scence/teaching.tscn")
-- Start again => start
-- End the conversation => END
-Lee: For more information see the online documentation.
-
-=> END
-
-~ html
-if HtmlLesson == 0
-	Lee: This is htmlThe HyperText Markup Language or HTML is the standard 
-		markup language for documents designed to be displayed in a web browser. 
-		It defines the meaning and structure of web content. 
-		set HtmlLesson =1
-if HtmlLesson == 1
-	Lee: This is a example code of how html language work. 
-	=> END
-if HtmlLesson == 2
-	Lee: This is the output of the code i show before.
-Lee: Do you want to learn again.
-- Yes 
-	set HtmlLesson = 0
-	=> html
-- No	
-	=> END
 	
 ~ floor_1
 : Do you want to enter Building 2 ?
@@ -46,7 +10,7 @@ Lee: Do you want to learn again.
 	
 	
 ~ exist_floor_1
-do get_tree().change_scene_to_file("res://Scence/rmit_outside_map.tscn")
+do get_tree().change_scene_to_file("res://Scence/out_b1.tscn")
 => END
 
 ~ floor_4
@@ -75,7 +39,7 @@ do get_tree().change_scene_to_file("res://Scence/rmit_outside_map.tscn")
 
 
 ~ exist_connect
-do get_tree().change_scene_to_file("res://Scence/rmit_outside_map.tscn")
+do get_tree().change_scene_to_file("res://Scence/out_connect.tscn")
 => END
 
 
@@ -87,24 +51,21 @@ do get_tree().change_scene_to_file("res://Scence/rmit_outside_map.tscn")
 - No
 	=> END
 
-~ Java_room
-: Do you want to go to Java class ?
+	
+~ CSS_room
+: Do you want to go to CSS class ?
 - Yes
-	do get_tree().change_scene_to_file("res://Scence/Room_Java.tscn")
+	do get_tree().change_scene_to_file("res://Scence/Room_CSS.tscn")
 	=> END
 - No
 	=> END
 	
-~ HTML_room
-: Do you want to go to HTML class ?
-- Yes
-	do get_tree().change_scene_to_file("res://Scence/Room_HTML.tscn")
-	=> END
-- No
-	=> END
-	
-~ exist_class
-do get_tree().change_scene_to_file("res://Scence/building_2_layer_4.tscn")
+~ exist_class_c
+do get_tree().change_scene_to_file("res://Scence/out_c_class.tscn")
+=> END
+
+~ exist_class_css
+do get_tree().change_scene_to_file("res://Scence/out_css_class.tscn")
 => END
 
 ~ medical_room
@@ -116,17 +77,49 @@ do get_tree().change_scene_to_file("res://Scence/building_2_layer_4.tscn")
 	=> END
 
 ~ exist_medical
-do get_tree().change_scene_to_file("res://Scence/rmit_outside_map.tscn")
+do get_tree().change_scene_to_file("res://Scence/out_medical.tscn")
 => END
 
 ~ sport_hall_return
-do get_tree().change_scene_to_file("res://Scence/sport_hall.tscn")
+do get_tree().change_scene_to_file("res://Scence/sport_hall_medical.tscn")
 => END
 
 ~ sport_hall
-: Do you want to go t0 Sport Hall ?
+: Do you want to go to Sport Hall ?
 - Yes
 	do get_tree().change_scene_to_file("res://Scence/sport_hall.tscn")
+	=> END
+- No
+	=> END
+~ sport_hall_exist
+do get_tree().change_scene_to_file("res://Scence/out_sporthall.tscn")
+=> END
+~ exist_cafeteria
+do get_tree().change_scene_to_file("res://Scence/out_cafeteria.tscn")
+=> END
+
+~ cafeteria
+: Do you want to go to Cafeteria ?
+- Yes
+	do get_tree().change_scene_to_file("res://Scence/cafeteria.tscn")
+	=> END
+- No
+	=> END
+
+~ food
+if Game.currentHealth == 0
+	{{charaName[PlayerSelect]}}: I've had a satisfying meal, and now I'm ready to get back to my studies.
+	=> END
+set Game.currentHealth -= 5
+{{charaName[PlayerSelect]}}: [[Yummy! Each bite is a delight.|Delicious! A feast for the senses.|Delectable! Pure gastronomic bliss!|Scrumptious! A taste of perfection.|Tasty! Culinary excellence!|Savory! An irresistible treat.]]
+=> END
+
+~ pill
+Nurse: Do you want to reduce your stress ?
+- Yes
+	set Game.currentHealth = 0
+	{{charaName[PlayerSelect]}}: I feel better then thank you very much.
+	Nurse: No problem. It is our responsibility to support students who may feel unwell.
 	=> END
 - No
 	=> END
