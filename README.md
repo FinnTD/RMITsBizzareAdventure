@@ -1,8 +1,8 @@
-#RMITsBizzareAdventure
+# RMITsBizzareAdventure
 
 RMITs Bizzare Adventure is a game fot player to explores school campus and learns programming language.
 
-#Deployment
+# Deployment
 
 1: Download and install Godot
 
