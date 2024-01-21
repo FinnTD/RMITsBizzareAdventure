@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://dtddohubqaos3"]
 
 [ext_resource type="PackedScene" uid="uid://bq6ovuvmbd2ld" path="res://entities/player/player.tscn" id="1_q78b4"]
-[ext_resource type="Texture2D" uid="uid://bc7cdqgb0rugs" path="res://map/innermap/building2/Floor 4 build 2.png" id="2_sdpl6"]
+[ext_resource type="Texture2D" uid="uid://c2g6d3mhf40oi" path="res://map/innermap/building2/Floor 4 build 2.png" id="2_sdpl6"]
 [ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="3_6job2"]
 [ext_resource type="Resource" uid="uid://bunb0l767uiw" path="res://dialogue/game_dialogue.dialogue" id="4_0ltm3"]
 
@@ -62,11 +62,6 @@ limit_bottom = 1350
 editor_draw_limits = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="Floor4Build2" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(693, -6)
-scale = Vector2(3, 3)
-texture = ExtResource("2_sdpl6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(81, 675)
@@ -183,3 +178,9 @@ dialogue_start = "CSS_room"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble2"]
 position = Vector2(148, 574)
 shape = SubResource("RectangleShape2D_ou2qr")
+
+[node name="Floor4Build2" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(688, -3)
+scale = Vector2(3, 3)
+texture = ExtResource("2_sdpl6")

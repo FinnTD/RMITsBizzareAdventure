@@ -1,10 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://bd7vh2ti0ghqq"]
+[gd_scene load_steps=20 format=3 uid="uid://bd7vh2ti0ghqq"]
 
+[ext_resource type="Script" path="res://Opening/building_2_layer_1.gd" id="1_drw88"]
 [ext_resource type="PackedScene" uid="uid://bq6ovuvmbd2ld" path="res://entities/player/player.tscn" id="2_yykkd"]
 [ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="3_qbbra"]
 [ext_resource type="Texture2D" uid="uid://cr0fqnbekiv4m" path="res://map/innermap/building2/floor 1 build 2.png" id="4_6c34n"]
 [ext_resource type="Resource" uid="uid://bunb0l767uiw" path="res://dialogue/game_dialogue.dialogue" id="4_fm7y2"]
 [ext_resource type="Resource" uid="uid://dngsjryljiwqe" path="res://dialogue/test_c.dialogue" id="5_xnbhq"]
+[ext_resource type="PackedScene" uid="uid://cc8iraoml5bn0" path="res://entities/NPC/Anna.tscn" id="6_lg4o3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qyvm1"]
 size = Vector2(706, 44)
@@ -43,6 +45,7 @@ size = Vector2(113, 118.5)
 size = Vector2(119, 84)
 
 [node name="building2Layer1" type="Node2D"]
+script = ExtResource("1_drw88")
 
 [node name="Player" parent="." instance=ExtResource("2_yykkd")]
 z_index = 10
@@ -150,3 +153,7 @@ dialogue_start = "test"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble"]
 position = Vector2(794, 62)
 shape = SubResource("RectangleShape2D_imp4s")
+
+[node name="NPC" parent="." instance=ExtResource("6_lg4o3")]
+z_index = 15
+position = Vector2(24, 632)
