@@ -9,3 +9,7 @@ RMITs Bizzare Adventure is a game fot player to explores school campus and learn
 2: Import the project.godot file from the home directory
 
 3: Click Run button to run the game. 
+
+# Github
+
+https://github.com/FinnTD/RMITsBizzareAdventure
