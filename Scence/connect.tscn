@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://w2p124ta1cbn"]
+[gd_scene load_steps=21 format=3 uid="uid://w2p124ta1cbn"]
 
 [ext_resource type="Texture2D" uid="uid://bcqnq1vvppcn7" path="res://map/innermap/building1/Connect.png" id="1_krpt5"]
+[ext_resource type="Script" path="res://Opening/connect.gd" id="1_pfdxb"]
 [ext_resource type="PackedScene" uid="uid://bq6ovuvmbd2ld" path="res://entities/player/player.tscn" id="2_gvul8"]
 [ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="3_ul1eq"]
 [ext_resource type="Resource" uid="uid://bunb0l767uiw" path="res://dialogue/game_dialogue.dialogue" id="4_h1sqw"]
@@ -49,6 +50,7 @@ radius = 23.4307
 size = Vector2(228, 59.5)
 
 [node name="Connect" type="Node2D"]
+script = ExtResource("1_pfdxb")
 
 [node name="Connect" type="Sprite2D" parent="."]
 position = Vector2(601, 628)

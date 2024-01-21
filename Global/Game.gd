@@ -18,3 +18,7 @@ var CPlusLesson = 0
 var TestScore = 0
 
 var showResult = false
+
+var guard_welcome = true
+var connect_welcome = true
+var anna_welcome = true

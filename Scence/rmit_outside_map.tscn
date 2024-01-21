@@ -1,6 +1,7 @@
-[gd_scene load_steps=88 format=3 uid="uid://cyqwyj8qqxwny"]
+[gd_scene load_steps=89 format=3 uid="uid://cyqwyj8qqxwny"]
 
 [ext_resource type="PackedScene" uid="uid://xrpjcifx67o3" path="res://map/outsidemap/rmitmap.tmx" id="1_6lb21"]
+[ext_resource type="Script" path="res://Opening/rmit_outside_map.gd" id="1_nfe1j"]
 [ext_resource type="Texture2D" uid="uid://mrrhpu526xtp" path="res://map/detailed obj/tree.png" id="2_jl80g"]
 [ext_resource type="PackedScene" uid="uid://bq6ovuvmbd2ld" path="res://entities/player/player.tscn" id="3_ksyn3"]
 [ext_resource type="Texture2D" uid="uid://djg4pucpv4lte" path="res://map/detailed obj/SH2.png" id="4_6uwjp"]
@@ -35,7 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://13kj14mkx24v" path="res://map/detailed obj/shortTree.png" id="32_o4evn"]
 [ext_resource type="Texture2D" uid="uid://dslrn7pooknl7" path="res://map/detailed obj/B89.png" id="32_w10ww"]
 [ext_resource type="PackedScene" uid="uid://cg1224t4l4fn2" path="res://music/MusicBackground.tscn" id="36_hs00f"]
-[ext_resource type="Texture2D" uid="uid://c3m5mkqot42xk" path="res://map/outsidemap/basketballfield.png" id="37_s1qxs"]
+[ext_resource type="Texture2D" uid="uid://d1hhf0qmalggq" path="res://map/outsidemap/baskestballfield.png" id="37_0xbek"]
 [ext_resource type="PackedScene" uid="uid://b27gn31ns2x2w" path="res://entities/NPC/keeper.tscn" id="38_dx0xy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmh1k"]
@@ -192,6 +193,7 @@ size = Vector2(348, 148)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(1744, 33)
+script = ExtResource("1_nfe1j")
 
 [node name="rmitmap" parent="." instance=ExtResource("1_6lb21")]
 z_index = -8
@@ -1377,7 +1379,7 @@ shape = SubResource("RectangleShape2D_m2jmv")
 z_index = -7
 position = Vector2(179, 454.5)
 scale = Vector2(0.65367, 0.65812)
-texture = ExtResource("37_s1qxs")
+texture = ExtResource("37_0xbek")
 
 [node name="ActionAble" parent="." instance=ExtResource("7_pu2n1")]
 dialogue_resource = ExtResource("8_ihyur")

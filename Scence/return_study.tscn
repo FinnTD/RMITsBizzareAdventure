@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://4tpwgo4lr11j"]
+[gd_scene load_steps=19 format=3 uid="uid://4tpwgo4lr11j"]
 
 [ext_resource type="PackedScene" uid="uid://bq6ovuvmbd2ld" path="res://entities/player/player.tscn" id="1_ucx8m"]
 [ext_resource type="PackedScene" uid="uid://od31d850fsgq" path="res://dialogue/action_able.tscn" id="2_bwnvb"]
 [ext_resource type="Resource" uid="uid://bunb0l767uiw" path="res://dialogue/game_dialogue.dialogue" id="3_ga6tm"]
 [ext_resource type="Texture2D" uid="uid://cr0fqnbekiv4m" path="res://map/innermap/building2/floor 1 build 2.png" id="4_f441j"]
 [ext_resource type="Resource" uid="uid://dngsjryljiwqe" path="res://dialogue/test_c.dialogue" id="5_h1rsd"]
+[ext_resource type="PackedScene" uid="uid://cc8iraoml5bn0" path="res://entities/NPC/Anna.tscn" id="6_rku62"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qyvm1"]
 size = Vector2(706, 44)
@@ -150,3 +151,6 @@ dialogue_start = "test"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionAble"]
 position = Vector2(794, 62)
 shape = SubResource("RectangleShape2D_imp4s")
+
+[node name="NPC" parent="." instance=ExtResource("6_rku62")]
+position = Vector2(25, 629)

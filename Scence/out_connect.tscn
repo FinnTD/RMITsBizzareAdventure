@@ -35,7 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://dtac3588gaqte" path="res://map/detailed obj/Cafeteria.png" id="33_sucdh"]
 [ext_resource type="Texture2D" uid="uid://13kj14mkx24v" path="res://map/detailed obj/shortTree.png" id="34_466rd"]
 [ext_resource type="Texture2D" uid="uid://dslrn7pooknl7" path="res://map/detailed obj/B89.png" id="35_5f888"]
-[ext_resource type="Texture2D" uid="uid://c3m5mkqot42xk" path="res://map/outsidemap/basketballfield.png" id="36_do6u1"]
+[ext_resource type="Texture2D" uid="uid://d1hhf0qmalggq" path="res://map/outsidemap/baskestballfield.png" id="36_tcglj"]
 [ext_resource type="PackedScene" uid="uid://b27gn31ns2x2w" path="res://entities/NPC/keeper.tscn" id="37_xj5ne"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmh1k"]
@@ -1377,7 +1377,7 @@ shape = SubResource("RectangleShape2D_m2jmv")
 z_index = -7
 position = Vector2(179, 454.5)
 scale = Vector2(0.65367, 0.65812)
-texture = ExtResource("36_do6u1")
+texture = ExtResource("36_tcglj")
 
 [node name="ActionAble" parent="." instance=ExtResource("7_ivfer")]
 dialogue_resource = ExtResource("8_tj74f")

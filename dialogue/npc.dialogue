@@ -1,5 +1,29 @@
-~ guard
 
+~ guard
+if guard_welcome == true:
+	Guard: Hello there new student! Welcome to RMIT SaiGon South Campus!
+	Guard: Take a look around! This will be the tertiary institute to drown you in tears as you 
+		scramble to get your work submitted on time MUAHAHAHA!!!
+	Guard: Oooh I’m just messing with you. Things won’t be that bad, I hope, haha!
+	Guard:  Alright enough with the jokes, let me give you a tour around the place. In front of 
+		you there is Building 1, also known as Beanland Building, and Building 2, where you’ll spend
+		the majority of your time studying and taking tests. Exciting, yes?
+	Guard: But the teachers in Building 1 is on vacation right now, so go to the other one, say hi to Mr. Tuan Tran,
+		Mrs. Anna Felipe and Mr. Nhat Quang for me while you’re at it, he’ll be in charge of teaching you and 
+		testing your knowledge.
+	Guard: There’s the Student Connect Staff on the ground floor of Building 1 if you want to get some advice
+		 on how to make the most of your time here.
+	Guard: Opposite to Building 1, you’ll find the parking space for motorbikes, don’t let me catch you up to no good over 
+		there, you hear me?! And next to it is the Cafeteria, the cooks there sure know how to do  their magic, one bite of 
+		their food  and you’ll feel all better and ready for the next lesson!Say, get me one of their hotdogs, it’s really good!
+	Guard: Keep walking towards the West side of the campus and you’ll reach Building 8 & 9. But since they’re under 
+		maintenance, just keep on going forward and you’ll reach the Sport Hall. You can try out some of the sports 
+		that we have here on campus, the Nurse office is also inside that building.
+	Guard: When you see a question mark above a character's head, it signals an interactive element. 
+		Press the space button to engage and discover interesting features within the game world.
+	Guard: Well that’s enough to get you started, off you go now. Have fun exploring the campus!
+	set guard_welcome = false
+	=> END
 Guard: [[Hello and welcome to RMIT! Make sure to be on time for your classes. Don't forget your student ID card; it's your key to everything on campus|Good day! Remember, punctuality is key. Always carry your student ID card with you. It's your ticket to a smooth campus experience|Need directions? Feel free to ask. It can be a bit overwhelming at first, but I'm here to help you find your way around]] .
 
 => END
@@ -11,7 +35,38 @@ Nurse: [[Hi there! How's your day going? Need any medical assistance, just check
 => END
 
 ~ helper
-
+if connect_welcome == true:
+	Helper: Hello new student! Welcome to RMIT VietNam! Having fun exploring our campus I see, well it’s a good thing that you
+		visit the Student Connect Office, lend me your ear and I’ll give you some real useful advice!
+	Helper: See, you’re free to do anything you want on Campus, take some lessons, visit the cafeteria for some food, or just run
+		around the place, so long as your Stress Bar isn’t filled to the brim. Making the wrong choice when taking the test 
+		will increase your Stress Level and when the Stress Bar is filled, you gotta take a break from studying.
+	Helper: So what to do when you’re too stressed out you ask? Well that’s easy, go to the Cafeteria for some food!No really!
+		Getting some delicious food in will help relieve some of your Stress Level. Or take a trip to the Nurse, she’ll get
+		you back on your feet right away! 
+	Helper: Taking part in some Extracurricular Activities also help, but you have to wait around the Festival Season, 
+		and that’s not in for a few months.
+	Helper: That’s all from me now, feel free to visit again if you have any questions! See ya!
+	set connect_welcome = false
+	=> END
 Helper: [[Welcome! Curious about how our learning system works in this game? I can guide you through it|Interested in knowing more about RMIT Vietnam or our SaiGon South Campus? I've got all the information you need |Want to join a study group or a coding club? I can connect you with other students who share your interests|Need tech support? We're here to assist with any issues you might encounter in the game or your coursework]] .
 
+=> END
+
+~ anna
+if anna_welcome == true:
+	Mrs. Anna Felipe: Ah, a new student! Welcome, welcome! Ready for class? Then let me show you how we do things around here!
+	Mrs. Anna Felipe: The teaching structure in our class will have two parts: The first half will introduce you to some textbook knowledge 
+		about a certain topic, then the second half will test your understanding of the topic studied.
+	Mrs. Anna Felipe: You can choose any course you want to study, currently we are offering to teach you how to program  C++ and CSS.
+		CSS lessons will be instructed by Mr. Tuan Tran, while Mr. Nhat Quang will be guiding you through C++ programming.
+	Mrs. Anna Felipe: The courses are separated into modules, you’ll need to complete each module where you pass their test to move on 
+		before moving on to the more advanced level.
+	Mrs. Anna Felipe: Feel free to revisit my lessons if you have any questions. And the tests are there for you to take 
+		as many times as you like. But do take care when answering them, you’ll get pretty stressed and tired out!
+	Mrs. Anna Felipe: And that is all you need to know! Ready to attend your first lesson?
+	set anna_welcome = false
+	=> END
+Mrs. Anna Felipe: Feel free to revisit my lessons if you have any questions. And the tests are there for you to take 
+	as many times as you like. But do take care when answering them, you’ll get pretty stressed and tired out!
 => END
